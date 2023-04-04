@@ -1,0 +1,138 @@
+.pricing-section {
+	background: #0a0a0a;
+}
+
+.pricing-section .section-title {
+	margin-bottom: 56px;
+}
+
+.ps-item {
+	text-align: center;
+	padding: 40px 30px 52px;
+	border: 1px solid #03e9f4;
+	-webkit-transform: skewY(-4deg);
+	-ms-transform: skewY(-4deg);
+	transform: skewY(-4deg);
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	margin-bottom: 30px;
+	position: relative;
+}
+
+.ps-item:hover {
+	background: #ffffff;
+	border-color: #ffffff;
+}
+
+.ps-item:hover h3 {
+	color: #111111;
+}
+
+.ps-item:hover .pi-price span {
+	color: #444444;
+}
+
+.ps-item:hover ul li {
+
+	color: #111111;
+	font-weight: 600;
+}
+
+.ps-item:hover .primary-btn.pricing-btn {
+	background: #03e9f4;
+}
+
+.ps-item:hover .thumb-icon {
+	opacity: 1;
+	visibility: visible;
+}
+
+.ps-item h3 {
+	font-size: 28px;
+	color: #ffffff;
+	font-weight: 600;
+	margin-bottom: 16px;
+	-webkit-transform: skewY(4deg);
+	-ms-transform: skewY(4deg);
+	transform: skewY(4deg);
+}
+
+.ps-item .pi-price {
+	margin-bottom: 30px;
+	-webkit-transform: skewY(4deg);
+	-ms-transform: skewY(4deg);
+	transform: skewY(4deg);
+}
+
+.ps-item .pi-price h2 {
+	font-size: 60px;
+	color: #03e9f4;
+	font-weight: 600;
+}
+
+.ps-item .pi-price span {
+	color: #c4c4c4;
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.ps-item ul {
+	margin-bottom: 40px;
+	-webkit-transform: skewY(4deg);
+	-ms-transform: skewY(4deg);
+	transform: skewY(4deg);
+}
+
+.ps-item ul li {
+	font-size: 14px;
+	color: #c4c4c4;
+	line-height: 32px;
+	list-style: none;
+}
+
+.ps-item .primary-btn.pricing-btn {
+	display: block;
+	background: #333333;
+	-webkit-transform: skewY(4deg);
+	-ms-transform: skewY(4deg);
+	transform: skewY(4deg);
+}
+
+.ps-item .thumb-icon {
+	font-size: 48px;
+	color: #03e9f4;
+	position: absolute;
+	left: 50px;
+	bottom: 120px;
+	-webkit-transform: skewY(4deg);
+	-ms-transform: skewY(4deg);
+	transform: skewY(4deg);
+	opacity: 0;
+	visibility: hidden;
+}
+.section-title {
+	margin-bottom: 45px;
+	text-align: center;
+}
+
+.section-title span {
+	font-size: 16px;
+	color: #03e9f4;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.section-title h2 {
+	color: #ffffff;
+	font-size: 32px;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin-top: 8px;
+}
+
+.spad {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}

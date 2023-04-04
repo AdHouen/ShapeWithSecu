@@ -1,0 +1,85 @@
+<div class="container-fluid bg-dark px-0">
+  <div class="row gx-0">
+      <div class="col-lg-3 bg-dark d-none d-lg-block">
+
+          <a routerLink="/accueil" class=" w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+            <img src="../../../../assets/img/Shape_logo_bleu.png" alt="">
+              <h1 class="m-0 display-4  text-uppercase">SHAPE</h1>
+          </a>
+      </div>
+      <div class="col-lg-9">
+
+          <div class="row gx-0 bg-secondary d-none d-lg-flex">
+              <div class="col-lg-7 px-5 text-start">
+                  <div class="h-100 d-inline-flex align-items-center py-2 me-4">
+                      <i class="fa fa-envelope me-2"></i>
+                      <h6 class="mb-0">shape@gmail.com</h6>
+                  </div>
+                  <div class="h-100 d-inline-flex align-items-center py-2">
+                      <i class="fa fa-phone-alt me-2"></i>
+                      <h6 class="mb-0">+33 (6) 29 39 05 26</h6>
+                  </div>
+              </div>
+              <div class="col-lg-5 px-5 text-end">
+                  <div class="d-inline-flex align-items-center py-2">
+                      <a class="btn btn-light btn-square rounded-circle me-2" href="">
+                          <i class="fab fa-facebook-f"></i>
+                      </a>
+                      <a class="btn btn-light btn-square rounded-circle me-2" href="">
+                          <i class="fab fa-twitter"></i>
+                      </a>
+                      <a class="btn btn-light btn-square rounded-circle me-2" href="">
+                          <i class="fab fa-linkedin-in"></i>
+                      </a>
+                      <a class="btn btn-light btn-square rounded-circle me-2" href="">
+                          <i class="fab fa-instagram"></i>
+                      </a>
+                      <a class="btn btn-light btn-square rounded-circle" href="">
+                          <i class="fab fa-youtube"></i>
+                      </a>
+                  </div>
+              </div>
+          </div>
+          <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0 px-lg-5">
+              <a href="index.html" class="navbar-brand d-block d-lg-none">
+                  <h1 class="m-0 display-4  text-uppercase">Shape</h1>
+              </a>
+              <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                  <div class="navbar-nav mr-auto py-0">
+                      <a routerLink="/accueil" class="nav-item nav-link active">Accueil</a>
+                      <a routerLink="/entrainement" class="nav-item nav-link">Planning</a>
+                      <a routerLink="/galerie" class="nav-item nav-link">Galerie</a>
+                      <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Mensuration</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                          <a class="dropdown-item " routerLink="/data">Data</a>
+                          <a class="dropdown-item " routerLink="/abonnement">Statistique</a>
+                        </div>
+                      </div>
+                      <a routerLink="/exercice" class="nav-item nav-link">Exercice</a>
+                      <a routerLink="/bmi" class="nav-item nav-link">IMC</a>
+                      <div class="nav-item dropdown">
+                          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Admin</a>
+                          <div class="dropdown-menu rounded-0 m-0">
+                            <a class="dropdown-item " routerLink="/abonnement">Abonnement</a>
+                            <a class="dropdown-item " routerLink="/entrainement">Entrainement</a>
+                            <a class="dropdown-item " routerLink="/exercice">Exercice</a>
+                            <a class="dropdown-item " routerLink="/galerie">Galerie</a>
+                            <a class="dropdown-item " routerLink="/mensuration">Mensuration</a>
+                            <a class="dropdown-item " routerLink="/muscle">Muscle</a>
+                            <a class="dropdown-item " routerLink="/utilisateur">Utilisateur</a>
+                          </div>
+                      </div>
+                      <a routerLink="/contact" class="nav-item nav-link">Contact</a>
+                  </div>
+                  <a  routerLink="/register" class="btn btn-primary py-md-3 px-md-5 d-none d-lg-block">S'enregister</a>
+                  <a  routerLink="/login" class="btn btn-success py-md-3 px-md-5 d-none d-lg-block">Se Connecter</a>
+              </div>
+          </nav>
+      </div>
+  </div>
+</div>
+<!-- Header End -->

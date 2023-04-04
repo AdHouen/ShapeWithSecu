@@ -1,0 +1,107 @@
+*{
+  font-family: Arial;
+
+
+}
+body{
+  background-color: #222429;
+}
+
+h2, h3,h4{
+  color: #00f2fe;
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #03e9f4;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+  background-color: transparent;
+  border: none;
+}
+
+.button:hover {
+    background-color: #00f2fe;
+    color: #040404;
+}
+
+.button:focus {
+    outline: 0;
+    background-color: #0d1728;
+}
+
+.max-550 {
+    background-color: #222429;
+    color:var(--light) ;
+
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+}
+#imcContainer {
+  width: 100%;
+  border-radius: 5px;
+  height: 40px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3f51b5+0,009688+11,4caf50+21,8bc34a+29,cddc39+40,ffeb3b+51,ff5722+62,f44336+72,f44336+81,dd2a2a+90,b71c1c+100 */
+  background: #3f51b5;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #3f51b5 0%, #009688 11%, #4caf50 21%, #8bc34a 29%, #cddc39 40%, #ffeb3b 51%, #ff5722 62%, #f44336 72%, #f44336 81%, #dd2a2a 90%, #b71c1c 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #3f51b5 0%,#009688 11%,#4caf50 21%,#8bc34a 29%,#cddc39 40%,#ffeb3b 51%,#ff5722 62%,#f44336 72%,#f44336 81%,#dd2a2a 90%,#b71c1c 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #3f51b5 0%,#009688 11%,#4caf50 21%,#8bc34a 29%,#cddc39 40%,#ffeb3b 51%,#ff5722 62%,#f44336 72%,#f44336 81%,#dd2a2a 90%,#b71c1c 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+#IMCbar {
+  width:0%;
+  height: 40px;
+  margin-top: -5px;
+  border-right: 5px solid #000;
+  transition: all 2s ease;
+}
+
+
+
+.chart-table table {
+	border: 1px solid #363636;
+  margin: 0 auto;
+  text-align: center;
+
+}
+
+.chart-table table thead {
+	border-bottom: 1px solid #363636;
+}
+
+.chart-table table thead tr th {
+	background: #060606;
+	font-size: 14px;
+	color: #ffffff;
+	font-weight: 500;
+	text-transform: uppercase;
+	border-right: 1px solid #363636;
+	padding: 1rem 5rem;
+}
+
+.chart-table table tbody tr:nth-child(even) {
+	background: #111111;
+}
+
+.chart-table table tbody tr td {
+	font-size: 14px;
+	color: #c4c4c4;
+	border-right: 1px solid #363636;
+	padding: 1rem 5rem;
+}
+
+
+
+

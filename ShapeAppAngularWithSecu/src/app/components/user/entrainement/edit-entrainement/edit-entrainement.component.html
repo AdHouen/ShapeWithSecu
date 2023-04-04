@@ -1,0 +1,40 @@
+
+<br>
+<br>
+<H2 class="text-center">Modifier un Entrainement</H2>
+<div class="container ">
+    <form  [formGroup]="editForm" (ngSubmit)="update()">
+        <div class="form-group">
+          <div class="input-field col s16">
+            <label for="content">serie</label>
+            <input type="text" name="" id="champs"  class="form-control" formControlName="serie" data-length="10">
+          </div>
+          <div class="input-field col s16">
+            <label for="content">repetition</label>
+            <input type="text" name="" id="champs"  class="form-control" formControlName="repetition" data-length="10">
+          </div>
+          <div class="input-field col s16">
+            <label for="content">poids</label>
+            <input type="text" name="" id="champs"  class="form-control" formControlName="poids" data-length="10">
+          </div>
+          <div class="input-field col s16">
+            <label for="content">recup</label>
+            <input type="text" name="" id="champs"  class="form-control" formControlName="recup" data-length="10">
+          </div>
+          <div class="input-field col s16">
+            <label for="content">temps</label>
+            <input type="text" name="" id="champs"  class="form-control" formControlName="temps" data-length="10">
+          </div>
+          <div class="input-field col s16">
+            <label for="content">distance</label>
+            <input type="text" name="" id="champs"  class="form-control" formControlName="distance" data-length="10">
+          </div>
+
+          </div>
+          <div class="container buttonSubmit">
+            <button  class="btn btn-success " type="submit">Soumettre</button>
+            </div>
+    </form>
+    <br>
+</div>
+{{editForm.value | json}}

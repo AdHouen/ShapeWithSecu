@@ -1,0 +1,350 @@
+<!-- Class Timetable Start -->
+<div class="container-fluid p-5">
+    <div class="mb-5 text-center">
+        <h5 class="text-uppercase">Ton planning</h5>
+        <h1 class="display-3 text-uppercase mb-0">Choisis ton entrainement</h1>
+        <br>
+        <a routerLink="/addEntrainement" class="btn btn-success waves-effect waves-light btn right orange">Ajouter un entrainement</a>
+        <br>
+    </div>
+    <div class="tab-class text-center">
+        <ul class="nav nav-pills d-inline-flex justify-content-center bg-dark text-uppercase rounded-pill mb-5">
+            <li class="nav-item" >
+                <a class="nav-link rounded-pill text-white " data-bs-toggle="pill" href="#tab-1" >Lundi</a>
+            </li>
+            <li class="nav-item" >
+                <a class="nav-link rounded-pill text-white " data-bs-toggle="pill" href="#tab-2" >Mardi</a>
+            </li>
+            <li class="nav-item" >
+                <a class="nav-link rounded-pill text-white " data-bs-toggle="pill" href="#tab-3" >Mercredi</a>
+            </li>
+            <li class="nav-item" >
+                <a class="nav-link rounded-pill text-white " data-bs-toggle="pill" href="#tab-4" >Jeudi</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link rounded-pill text-white " data-bs-toggle="pill" href="#tab-5" >Vendredi</a>
+            </li>
+            <li class="nav-item" >
+                <a class="nav-link rounded-pill text-white " data-bs-toggle="pill" href="#tab-6" >Samedi</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link rounded-pill text-white " data-bs-toggle="pill" href="#tab-7" >Dimanche</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="tab-content ">
+
+  <div id="tab-1" class="tab-pane fade p-0 ">
+    <H1 class="text-center">Lundi</H1>
+    <table id="table_id" class="table  align-middle  table-striped" >
+        <thead>
+            <tr>
+              <th scope="col">Muscle</th>
+              <th scope="col">Exercice</th>
+              <th scope="col">Serie</th>
+              <th scope="col">Répétition</th>
+              <th scope="col">Poids</th>
+              <th scope="col">Récupération</th>
+              <th scope="col">Temps</th>
+              <th scope="col">Distance</th>
+              <th scope="col">Edit</th>
+              <th scope="col">Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of entrainement">
+            <td *ngIf="item.jour=='Lundi'">{{item.muscle}}</td>
+            <td *ngIf="item.jour=='Lundi'">{{item.exercice}}</td>
+            <td *ngIf="item.jour=='Lundi'">{{item.serie}}</td>
+            <td *ngIf="item.jour=='Lundi'">{{item.repetition}}</td>
+            <td *ngIf="item.jour=='Lundi'">{{item.poids}} kg</td>
+            <td *ngIf="item.jour=='Lundi'">{{item.recup}} sec</td>
+            <td *ngIf="item.jour=='Lundi'">{{item.temps}}</td>
+            <td *ngIf="item.jour=='Lundi'">{{item.distance}}</td>
+            <td *ngIf="item.jour=='Lundi'">
+              <button class="btn btn-lg btn-outline-info" (click)="open(editEntrainement, item)" ><i class="fas fa-edit"></i> Edit</button>
+            </td>
+            <td *ngIf="item.jour=='Lundi'">
+              <button class="btn btn-lg btn-outline-danger" routerLink='/entrainements/{{item.entrainementId}}'><i class="far fa-trash-alt"></i> Remove</button>
+            </td>
+          </tr>
+    </tbody>
+    </table>
+  </div>
+  <div id="tab-2" class="tab-pane fade p-0 ">
+    <H1 class="text-center">Mardi</H1>
+    <table id="table_id" class="table  align-middle  table-striped" >
+        <thead>
+            <tr>
+              <th scope="col">Muscle</th>
+              <th scope="col">Exercice</th>
+              <th scope="col">Serie</th>
+              <th scope="col">Répétition</th>
+              <th scope="col">Poids</th>
+              <th scope="col">Récupération</th>
+              <th scope="col">Temps</th>
+              <th scope="col">Distance</th>
+              <th scope="col">Edit</th>
+              <th scope="col">Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of entrainement">
+            <td *ngIf="item.jour=='Mardi'">{{item.muscle}}</td>
+            <td *ngIf="item.jour=='Mardi'">{{item.exercice}}</td>
+            <td *ngIf="item.jour=='Mardi'">{{item.serie}}</td>
+            <td *ngIf="item.jour=='Mardi'">{{item.repetition}}</td>
+            <td *ngIf="item.jour=='Mardi'">{{item.poids}} kg</td>
+            <td *ngIf="item.jour=='Mardi'">{{item.recup}} sec</td>
+            <td *ngIf="item.jour=='Mardi'">{{item.temps}}</td>
+            <td *ngIf="item.jour=='Mardi'">{{item.distance}}</td>
+            <td *ngIf="item.jour=='Mardi'">
+              <button class="btn btn-lg btn-outline-info" (click)="open(editEntrainement, item)" ><i class="fas fa-edit"></i> Edit</button>
+            </td>
+            <td *ngIf="item.jour=='Mardi'">
+              <button class="btn btn-lg btn-outline-danger" routerLink='/entrainements/{{item.entrainementId}}'><i class="far fa-trash-alt"></i> Remove</button>
+            </td>
+          </tr>
+    </tbody>
+    </table>
+  </div>
+  <div id="tab-3" class="tab-pane fade p-0 ">
+    <H1 class="text-center">Mercredi</H1>
+    <table id="table_id" class="table  align-middle  table-striped" >
+        <thead>
+            <tr>
+              <th scope="col">Muscle</th>
+              <th scope="col">Exercice</th>
+              <th scope="col">Serie</th>
+              <th scope="col">Répétition</th>
+              <th scope="col">Poids</th>
+              <th scope="col">Récupération</th>
+              <th scope="col">Temps</th>
+              <th scope="col">Distance</th>
+              <th scope="col">Edit</th>
+              <th scope="col">Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of entrainement">
+            <td *ngIf="item.jour=='Mercredi'">{{item.muscle}}</td>
+            <td *ngIf="item.jour=='Mercredi'">{{item.exercice}}</td>
+            <td *ngIf="item.jour=='Mercredi'">{{item.serie}}</td>
+            <td *ngIf="item.jour=='Mercredi'">{{item.repetition}}</td>
+            <td *ngIf="item.jour=='Mercredi'">{{item.poids}} kg</td>
+            <td *ngIf="item.jour=='Mercredi'">{{item.recup}} sec</td>
+            <td *ngIf="item.jour=='Mercredi'">{{item.temps}}</td>
+            <td *ngIf="item.jour=='Mercredi'">{{item.distance}}</td>
+            <td *ngIf="item.jour=='Mercredi'">
+              <button class="btn btn-lg btn-outline-info" (click)="open(editEntrainement, item)" ><i class="fas fa-edit"></i> Edit</button>
+            </td>
+            <td *ngIf="item.jour=='Mercredi'">
+              <button class="btn btn-lg btn-outline-danger" routerLink='/entrainements/{{item.entrainementId}}'><i class="far fa-trash-alt"></i> Remove</button>
+            </td>
+          </tr>
+    </tbody>
+    </table>
+  </div>
+  <div id="tab-4" class="tab-pane fade p-0 ">
+    <H1 class="text-center">Jeudi</H1>
+    <table id="table_id" class="table  align-middle  table-striped" >
+        <thead>
+            <tr>
+              <th scope="col">Muscle</th>
+              <th scope="col">Exercice</th>
+              <th scope="col">Serie</th>
+              <th scope="col">Répétition</th>
+              <th scope="col">Poids</th>
+              <th scope="col">Récupération</th>
+              <th scope="col">Temps</th>
+              <th scope="col">Distance</th>
+              <th scope="col">Edit</th>
+              <th scope="col">Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of entrainement">
+            <td *ngIf="item.jour=='Jeudi'">{{item.muscle}}</td>
+            <td *ngIf="item.jour=='Jeudi'">{{item.exercice}}</td>
+            <td *ngIf="item.jour=='Jeudi'">{{item.serie}}</td>
+            <td *ngIf="item.jour=='Jeudi'">{{item.repetition}}</td>
+            <td *ngIf="item.jour=='Jeudi'">{{item.poids}} kg</td>
+            <td *ngIf="item.jour=='Jeudi'">{{item.recup}} sec</td>
+            <td *ngIf="item.jour=='Jeudi'">{{item.temps}}</td>
+            <td *ngIf="item.jour=='Jeudi'">{{item.distance}}</td>
+            <td *ngIf="item.jour=='Jeudi'">
+              <button class="btn btn-lg btn-outline-info" (click)="open(editEntrainement, item)" ><i class="fas fa-edit"></i> Edit</button>
+            </td>
+            <td *ngIf="item.jour=='Jeudi'">
+              <button class="btn btn-lg btn-outline-danger" routerLink='/entrainements/{{item.entrainementId}}'><i class="far fa-trash-alt"></i> Remove</button>
+            </td>
+          </tr>
+    </tbody>
+    </table>
+  </div>
+  <div id="tab-5" class="tab-pane fade p-0 ">
+    <H1 class="text-center">Vendredi</H1>
+    <table id="table_id" class="table  align-middle  table-striped" >
+        <thead>
+            <tr>
+              <th scope="col">Muscle</th>
+              <th scope="col">Exercice</th>
+              <th scope="col">Serie</th>
+              <th scope="col">Répétition</th>
+              <th scope="col">Poids</th>
+              <th scope="col">Récupération</th>
+              <th scope="col">Temps</th>
+              <th scope="col">Distance</th>
+              <th scope="col">Edit</th>
+              <th scope="col">Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of entrainement">
+            <td *ngIf="item.jour=='Vendredi'">{{item.muscle}}</td>
+            <td *ngIf="item.jour=='Vendredi'">{{item.exercice}}</td>
+            <td *ngIf="item.jour=='Vendredi'">{{item.serie}}</td>
+            <td *ngIf="item.jour=='Vendredi'">{{item.repetition}}</td>
+            <td *ngIf="item.jour=='Vendredi'">{{item.poids}} kg</td>
+            <td *ngIf="item.jour=='Vendredi'">{{item.recup}} sec</td>
+            <td *ngIf="item.jour=='Vendredi'">{{item.temps}}</td>
+            <td *ngIf="item.jour=='Vendredi'">{{item.distance}}</td>
+            <td *ngIf="item.jour=='Vendredi'">
+              <button class="btn btn-lg btn-outline-info" (click)="open(editEntrainement, item)" ><i class="fas fa-edit"></i> Edit</button>
+            </td>
+            <td *ngIf="item.jour=='Vendredi'">
+              <button class="btn btn-lg btn-outline-danger" routerLink='/entrainements/{{item.entrainementId}}'><i class="far fa-trash-alt"></i> Remove</button>
+            </td>
+          </tr>
+    </tbody>
+    </table>
+  </div>
+  <div id="tab-6" class="tab-pane fade p-0 ">
+    <H1 class="text-center">Samedi</H1>
+    <table id="table_id" class="table  align-middle  table-striped" >
+        <thead>
+            <tr>
+              <th scope="col">Muscle</th>
+              <th scope="col">Exercice</th>
+              <th scope="col">Serie</th>
+              <th scope="col">Répétition</th>
+              <th scope="col">Poids</th>
+              <th scope="col">Récupération</th>
+              <th scope="col">Temps</th>
+              <th scope="col">Distance</th>
+              <th scope="col">Edit</th>
+              <th scope="col">Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of entrainement">
+            <td *ngIf="item.jour=='Samedi'">{{item.muscle}}</td>
+            <td *ngIf="item.jour=='Samedi'">{{item.exercice}}</td>
+            <td *ngIf="item.jour=='Samedi'">{{item.serie}}</td>
+            <td *ngIf="item.jour=='Samedi'">{{item.repetition}}</td>
+            <td *ngIf="item.jour=='Samedi'">{{item.poids}} kg</td>
+            <td *ngIf="item.jour=='Samedi'">{{item.recup}} sec</td>
+            <td *ngIf="item.jour=='Samedi'">{{item.temps}}</td>
+            <td *ngIf="item.jour=='Samedi'">{{item.distance}}</td>
+            <td *ngIf="item.jour=='Samedi'">
+              <button class="btn btn-lg btn-outline-info" (click)="open(editEntrainement, item)" ><i class="fas fa-edit"></i> Edit</button>
+            </td>
+            <td *ngIf="item.jour=='Samedi'">
+              <button class="btn btn-lg btn-outline-danger" routerLink='/entrainements/{{item.entrainementId}}'><i class="far fa-trash-alt"></i> Remove</button>
+            </td>
+          </tr>
+    </tbody>
+    </table>
+  </div>
+  <div id="tab-7" class="tab-pane fade p-0 ">
+    <H1 class="text-center">Dimanche</H1>
+    <table id="table_id" class="table  align-middle  table-striped" >
+        <thead>
+            <tr>
+              <th scope="col">Muscle</th>
+              <th scope="col">Exercice</th>
+              <th scope="col">Serie</th>
+              <th scope="col">Répétition</th>
+              <th scope="col">Poids</th>
+              <th scope="col">Récupération</th>
+              <th scope="col">Temps</th>
+              <th scope="col">Distance</th>
+              <th scope="col">Edit</th>
+              <th scope="col">Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of entrainement">
+            <td *ngIf="item.jour=='Dimanche'">{{item.muscle}}</td>
+            <td *ngIf="item.jour=='Dimanche'">{{item.exercice}}</td>
+            <td *ngIf="item.jour=='Dimanche'">{{item.serie}}</td>
+            <td *ngIf="item.jour=='Dimanche'">{{item.repetition}}</td>
+            <td *ngIf="item.jour=='Dimanche'">{{item.poids}} kg</td>
+            <td *ngIf="item.jour=='Dimanche'">{{item.recup}} sec</td>
+            <td *ngIf="item.jour=='Dimanche'">{{item.temps}}</td>
+            <td *ngIf="item.jour=='Dimanche'">{{item.distance}}</td>
+            <td *ngIf="item.jour=='Dimanche'">
+              <button class="btn btn-lg btn-outline-info" (click)="open(editEntrainement, item)" ><i class="fas fa-edit"></i> Edit</button>
+            </td>
+            <td *ngIf="item.jour=='Dimanche'">
+              <button class="btn btn-lg btn-outline-danger" routerLink='/entrainements/{{item.entrainementId}}'><i class="far fa-trash-alt"></i> Remove</button>
+            </td>
+          </tr>
+    </tbody>
+    </table>
+  </div>
+
+</div>
+
+
+
+<!-- (click)="open(editEntrainement)" -->
+<!-- routerLink='/editEntrainement/{{item.entrainementId}}' -->
+
+
+
+
+
+<!-- Modal Editer un entrainement -->
+<ng-template #editEntrainement let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Editer : Entrainement</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+		<form  [formGroup]="editForm" (ngSubmit)="update()">
+      <div class="form-group">
+        <div class="input-field col s16">
+          <label for="content">serie</label>
+          <input type="text" name="serie"  id="serie"  class="form-control" formControlName="serie" data-length="10">
+        </div>
+        <div class="input-field col s16">
+          <label for="content">repetition</label>
+          <input type="text" name="repetition" id="repetition"  class="form-control" formControlName="repetition" data-length="10">
+        </div>
+        <div class="input-field col s16">
+          <label for="content">poids</label>
+          <input type="text" name="poids" id="poids"  class="form-control" formControlName="poids" data-length="10">
+        </div>
+        <div class="input-field col s16">
+          <label for="content">recup</label>
+          <input type="text" name="recup" id="recup"  class="form-control" formControlName="recup" data-length="10">
+        </div>
+        <div class="input-field col s16">
+          <label for="content">temps</label>
+          <input type="text" name="temps" id="temps"  class="form-control" formControlName="temps" data-length="10">
+        </div>
+        <div class="input-field col s16">
+          <label for="content">distance</label>
+          <input type="text" name="distance" id="distance"  class="form-control" formControlName="distance" data-length="10">
+        </div>
+
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</ng-template>

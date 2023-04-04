@@ -1,0 +1,309 @@
+<div class="container-fluid p-5">
+    <div class="mb-5 text-center">
+        <h5 class="text-primary text-uppercase">Liste des exercices</h5>
+        <h1 class="display-3 text-uppercase mb-0">Choisis ton muscle</h1>
+    </div>
+    <div class="tab-class text-center">
+        <ul class="nav nav-pills d-inline-flex justify-content-center bg-dark text-uppercase rounded-pill mb-5">
+            <li class="nav-item" *ngFor="let item of muscles">
+                <a class="nav-link rounded-pill text-white " data-bs-toggle="pill" href="#tab-{{item.muscleId}}" id="id-{{item.muscleId}}">{{item.nom}}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="tab-content " *ngFor="let item of muscles">
+
+        <div id="tab-1" class="tab-pane fade p-0 ">
+            <table id="table_id" class="table align-middle  table-striped" >
+                <thead>
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Mesure</th>
+                        <th scope="col">Evolution</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of mensurations">
+                        <td *ngIf="item.muscleId==1">{{item.date}}</td>
+                        <td *ngIf="item.muscleId==1">{{item.valeur}}</td>
+                        <td *ngIf="item.muscleId==1">A voir</td>
+                        <td *ngIf="item.muscleId==1">
+                            <button class="btn btn-lg btn-outline-info" (click)="open(editMensuration, item)" ><i class="fas fa-edit"></i> Edit</button>
+                        </td>
+                        <td *ngIf="item.muscleId==1">
+                            <button class="btn btn-lg btn-outline-danger" routerLink='/data/{{item.mensurationId}}'><i class="far fa-trash-alt"></i> Remove</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="tab-2" class="tab-pane fade p-0 ">
+            <table id="table_id" class="table align-middle  table-striped" >
+                <thead>
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Mesure</th>
+                        <th scope="col">Evolution</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of mensurations">
+                        <td *ngIf="item.muscleId==2">{{item.date}}</td>
+                        <td *ngIf="item.muscleId==2">{{item.valeur}}</td>
+                        <td *ngIf="item.muscleId==2">A voir</td>
+                        <td *ngIf="item.muscleId==2">
+                            <button class="btn btn-lg btn-outline-info" (click)="open(editMensuration, item)" ><i class="fas fa-edit"></i> Edit</button>
+                        </td>
+                        <td *ngIf="item.muscleId==2">
+                            <button class="btn btn-lg btn-outline-danger" routerLink='/data/{{item.mensurationId}}'><i class="far fa-trash-alt"></i> Remove</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="tab-3" class="tab-pane fade p-0 ">
+            <table id="table_id" class="table align-middle  table-striped" >
+                <thead>
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Mesure</th>
+                        <th scope="col">Evolution</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of mensurations">
+                        <td *ngIf="item.muscleId==3">{{item.date}}</td>
+                        <td *ngIf="item.muscleId==3">{{item.valeur}}</td>
+                        <td *ngIf="item.muscleId==3">A voir</td>
+                        <td *ngIf="item.muscleId==3">
+                            <button class="btn btn-lg btn-outline-info" (click)="open(editMensuration, item)" ><i class="fas fa-edit"></i> Edit</button>
+                        </td>
+                        <td *ngIf="item.muscleId==3">
+                            <button class="btn btn-lg btn-outline-danger" routerLink='/data/{{item.mensurationId}}'><i class="far fa-trash-alt"></i> Remove</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="tab-4" class="tab-pane fade p-0 ">
+            <table id="table_id" class="table align-middle  table-striped" >
+                <thead>
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Mesure</th>
+                        <th scope="col">Evolution</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of mensurations">
+                        <td *ngIf="item.muscleId==4">{{item.date}}</td>
+                        <td *ngIf="item.muscleId==4">{{item.valeur}}</td>
+                        <td *ngIf="item.muscleId==4">A voir</td>
+                        <td *ngIf="item.muscleId==4">
+                            <button class="btn btn-lg btn-outline-info" (click)="open(editMensuration, item)" ><i class="fas fa-edit"></i> Edit</button>
+                        </td>
+                        <td *ngIf="item.muscleId==4">
+                            <button class="btn btn-lg btn-outline-danger" routerLink='/data/{{item.mensurationId}}'><i class="far fa-trash-alt"></i> Remove</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="tab-5" class="tab-pane fade p-0 ">
+            <table id="table_id" class="table align-middle  table-striped" >
+                <thead>
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Mesure</th>
+                        <th scope="col">Evolution</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of mensurations">
+                        <td *ngIf="item.muscleId==5">{{item.date}}</td>
+                        <td *ngIf="item.muscleId==5">{{item.valeur}}</td>
+                        <td *ngIf="item.muscleId==5">A voir</td>
+                        <td *ngIf="item.muscleId==5">
+                            <button class="btn btn-lg btn-outline-info" (click)="open(editMensuration, item)" ><i class="fas fa-edit"></i> Edit</button>
+                        </td>
+                        <td *ngIf="item.muscleId==5">
+                            <button class="btn btn-lg btn-outline-danger" routerLink='/data/{{item.mensurationId}}'><i class="far fa-trash-alt"></i> Remove</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="tab-6" class="tab-pane fade p-0 ">
+            <table id="table_id" class="table align-middle  table-striped" >
+                <thead>
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Mesure</th>
+                        <th scope="col">Evolution</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of mensurations">
+                        <td *ngIf="item.muscleId==6">{{item.date}}</td>
+                        <td *ngIf="item.muscleId==6">{{item.valeur}}</td>
+                        <td *ngIf="item.muscleId==6">A voir</td>
+                        <td *ngIf="item.muscleId==6">
+                            <button class="btn btn-lg btn-outline-info" (click)="open(editMensuration, item)" ><i class="fas fa-edit"></i> Edit</button>
+                        </td>
+                        <td *ngIf="item.muscleId==6">
+                            <button class="btn btn-lg btn-outline-danger" routerLink='/data/{{item.mensurationId}}'><i class="far fa-trash-alt"></i> Remove</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="tab-7" class="tab-pane fade p-0 ">
+            <table id="table_id" class="table align-middle  table-striped" >
+                <thead>
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Mesure</th>
+                        <th scope="col">Evolution</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of mensurations">
+                        <td *ngIf="item.muscleId==7">{{item.date}}</td>
+                        <td *ngIf="item.muscleId==7">{{item.valeur}}</td>
+                        <td *ngIf="item.muscleId==7">A voir</td>
+                        <td *ngIf="item.muscleId==7">
+                            <button class="btn btn-lg btn-outline-info" (click)="open(editMensuration, item)" ><i class="fas fa-edit"></i> Edit</button>
+                        </td>
+                        <td *ngIf="item.muscleId==7">
+                            <button class="btn btn-lg btn-outline-danger" routerLink='/data/{{item.mensurationId}}'><i class="far fa-trash-alt"></i> Remove</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="tab-8" class="tab-pane fade p-0 ">
+            <table id="table_id" class="table align-middle  table-striped" >
+                <thead>
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Mesure</th>
+                        <th scope="col">Evolution</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of mensurations">
+                        <td *ngIf="item.muscleId==8">{{item.date}}</td>
+                        <td *ngIf="item.muscleId==8">{{item.valeur}}</td>
+                        <td *ngIf="item.muscleId==8">A voir</td>
+                        <td *ngIf="item.muscleId==8">
+                            <button class="btn btn-lg btn-outline-info" (click)="open(editMensuration, item)" ><i class="fas fa-edit"></i> Edit</button>
+                        </td>
+                        <td *ngIf="item.muscleId==8">
+                            <button class="btn btn-lg btn-outline-danger" routerLink='/data/{{item.mensurationId}}'><i class="far fa-trash-alt"></i> Remove</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="tab-9" class="tab-pane fade p-0 ">
+            <table id="table_id" class="table align-middle  table-striped" >
+                <thead>
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Mesure</th>
+                        <th scope="col">Evolution</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of mensurations">
+                        <td *ngIf="item.muscleId==9">{{item.date}}</td>
+                        <td *ngIf="item.muscleId==9">{{item.valeur}}</td>
+                        <td *ngIf="item.muscleId==9">A voir</td>
+                        <td *ngIf="item.muscleId==9">
+                            <button class="btn btn-lg btn-outline-info" (click)="open(editMensuration, item)" ><i class="fas fa-edit"></i> Edit</button>
+                        </td>
+                        <td *ngIf="item.muscleId==9">
+                            <button class="btn btn-lg btn-outline-danger" routerLink='/data/{{item.mensurationId}}'><i class="far fa-trash-alt"></i> Remove</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="tab-10" class="tab-pane fade p-0 ">
+            <table id="table_id" class="table align-middle  table-striped" >
+                <thead>
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Mesure</th>
+                        <th scope="col">Evolution</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of mensurations">
+                        <td *ngIf="item.muscleId==10">{{item.date}}</td>
+                        <td *ngIf="item.muscleId==10">{{item.valeur}}</td>
+                        <td *ngIf="item.muscleId==10">A voir</td>
+                        <td *ngIf="item.muscleId==10">
+                            <button class="btn btn-lg btn-outline-info" (click)="open(editMensuration, item)" ><i class="fas fa-edit"></i> Edit</button>
+                        </td>
+                        <td *ngIf="item.muscleId==10">
+                            <button class="btn btn-lg btn-outline-danger" routerLink='/data/{{item.mensurationId}}'><i class="far fa-trash-alt"></i> Remove</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+
+
+<!-- Modal Editer une Mensuration -->
+<ng-template #editMensuration let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Editer : Mensuration</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+		<form  [formGroup]="editForm" (ngSubmit)="update()">
+      <div class="form-group">
+        <div class="input-field col s16">
+          <label for="content">Date</label>
+          <input type="text" name="date"  id="date"  class="form-control" formControlName="date" data-length="10">
+        </div>
+        <div class="input-field col s16">
+          <label for="content">Valeur</label>
+          <input type="text" name="valeur" id="valeur"  class="form-control" formControlName="valeur" data-length="10">
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</ng-template>
+
+
+
+
+

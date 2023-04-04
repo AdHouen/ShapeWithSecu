@@ -1,0 +1,91 @@
+<div id="main-wrapper" class="container" style="margin-top: 5em; margin-bottom: 50em">
+  <div class="row justify-content-center">
+      <div class="col-xl-10">
+          <div class="card border-0">
+              <div class="card-body p-0">
+                  <div class="row no-gutters">
+                      <div class="col-lg-6">
+                          <div class="p-5">
+                              <div class="mb-5">
+                                  <h3 class="h4 text-theme text-center">Login</h3>
+                              </div>
+
+                              <h6 class="h5 mb-0">Heureux de vous revoir!</h6>
+                              <p class="text-muted mt-2 mb-5">Entrez votre identifiant et mot de passe pour accéder à l'interface administrateur.</p>
+
+
+                              <form #registerForm="ngForm" (ngSubmit)="onRegister(registerForm.value)">
+
+                                <div class="form-group">
+                                  <label for="exampleInputFirstName">Prenom</label>
+                                  <input type="text" class="form-control" name="firstname" placeholder="firstname" ngModel #firstNameInput="ngModel" required >
+                                </div>
+                                <span class="help-block" style="color:red;" *ngIf="firstNameInput.invalid && firstNameInput.touched">Veuillez entrer votre prénom</span>
+
+                                <div class="form-group">
+                                  <label for="exampleInputLastName">Nom</label>
+                                  <input type="text" class="form-control" name="lastname" placeholder="lastname" ngModel #lastNameInput="ngModel" required >
+                                </div>
+                                <span class="help-block" style="color:red;" *ngIf="lastNameInput.invalid && lastNameInput.touched">Veuillez entrer votre nom</span>
+
+
+                                <div class="form-group">
+                                    <label for="username">Identifiant</label>
+                                    <input type="text" class="form-control" name="username" placeholder="username" ngModel #usernameInput="ngModel" required >
+                                </div>
+                                <span class="help-block" style="color:red;" *ngIf="usernameInput.invalid && usernameInput.touched">Please enter a username</span>
+
+                                <div class="form-group mb-5">
+                                    <label for="exampleInputEmail">E-mail</label>
+                                    <input type="text" class="form-control" id="exampleInputEmail" name="email" placeholder="Email" ngModel #emailInput= "ngModel" required>
+                                    <span class="help-block" style="color:red;" *ngIf="emailInput.invalid && emailInput.touched">Please enter an email</span>
+                                </div>
+                                <div class="form-group mb-5">
+                                  <label for="exampleInputPassword">Password</label>
+                                  <input type="password" class="form-control" id="exampleInputPassword" name="password" placeholder="password" ngModel #passwordInput= "ngModel" required minlength="2">
+                                  <span class="help-block" style="color:red;" *ngIf="passwordInput.invalid && passwordInput.touched">Please enter a password.</span>
+                                </div>
+                                <div class="form-group">
+                                  <label for="confirmPassword">Confirm password</label>
+                                  <input type="password" name="confirmPassword" required ngModel #confirmPasswordInput= "ngModel" class="form-control">
+                                  <span class="help-block" style="color:red;" *ngIf="confirmPasswordInput.value !== passwordInput.value">le mot de passe ne corespond pas</span>
+                                  <span class="help-block" style="color:green;" *ngIf="confirmPasswordInput.value == passwordInput.value">le mot de passe coresspond</span>
+                                </div>
+
+                                <button type="submit" class="btn btn-theme" [disabled]="registerForm.invalid || showLoading">
+                                    <i *ngIf="showLoading" class="fas fa-spinner fa-spin"></i>
+                                    <span *ngIf="showLoading"> &nbsp;&nbsp;Chargement...</span>
+                                    <span *ngIf="!showLoading">S'enregistrer</span>
+                                </button>
+                                <a href="#l" routerLink="/login" class="forgot-link float-right text-primary" style="margin-left: 2em">Déjà enregistré ?</a>
+                              </form>
+                          </div>
+                      </div>
+
+                      <div class="col-lg-6 d-none d-lg-inline-block">
+                          <div class="account-block rounded-right">
+                              <div class="overlay rounded-right"> <img style="height: 100%; width: 100%;" src="http://localhost:8089/images/room_view_eiffel.png" alt="">
+                              </div>
+                              <div class="account-testimonial">
+
+
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+              <!-- end card-body -->
+          </div>
+          <!-- end card -->
+
+          <!-- <p class="text-muted text-center mt-3 mb-0">Don't have an account? <a routerLink="/register" href="register.html" class="text-primary ml-1">register</a></p> -->
+
+          <!-- end row -->
+
+      </div>
+      <!-- end col -->
+  </div>
+  <!-- Row -->
+</div>
+

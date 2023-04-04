@@ -1,0 +1,20 @@
+/* CSS Inputs Autres champs */
+.input-field{
+  margin: auto;
+	color: #00c6f8bd;
+  font-size: 1rem;
+  width: 12rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+#champs{
+  background: #222429;
+	color: #00c6f8bd;
+}
+/* Button submit */
+.container .buttonSubmit{
+  display: flex;
+  justify-content: center;
+}

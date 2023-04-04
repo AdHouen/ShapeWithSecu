@@ -1,0 +1,193 @@
+.section-title {
+	margin-bottom: 45px;
+	text-align: center;
+}
+
+.section-title span {
+	font-size: 16px;
+	color: #03e9f4;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.section-title h2 {
+	color: #ffffff;
+	font-size: 32px;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin-top: 8px;
+}
+
+
+.spad {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+
+
+
+
+/* Comment section */
+.leave-comment form input {
+	font-size: 13px;
+	color: #c4c4c4;
+	width: 100%;
+	height: 46px;
+	border: 1px solid #363636;
+	padding-left: 20px;
+	padding-right: 5px;
+	background: transparent;
+	margin-bottom: 20px;
+}
+
+.leave-comment form input::-webkit-input-placeholder {
+	color: #c4c4c4;
+}
+
+.leave-comment form input::-moz-placeholder {
+	color: #c4c4c4;
+}
+
+.leave-comment form input:-ms-input-placeholder {
+	color: #c4c4c4;
+}
+
+.leave-comment form input::-ms-input-placeholder {
+	color: #c4c4c4;
+}
+
+.leave-comment form input::placeholder {
+	color: #c4c4c4;
+}
+
+.leave-comment form textarea {
+	font-size: 13px;
+	color: #c4c4c4;
+	width: 100%;
+	height: 100px;
+	border: 1px solid #363636;
+	padding-left: 20px;
+	padding-top: 12px;
+	padding-right: 5px;
+	background: transparent;
+	margin-bottom: 14px;
+	resize: none;
+}
+
+.leave-comment form textarea::-webkit-input-placeholder {
+	color: #c4c4c4;
+}
+
+.leave-comment form textarea::-moz-placeholder {
+	color: #c4c4c4;
+}
+
+.leave-comment form textarea:-ms-input-placeholder {
+	color: #c4c4c4;
+}
+
+.leave-comment form textarea::-ms-input-placeholder {
+	color: #c4c4c4;
+}
+
+.leave-comment form textarea::placeholder {
+	color: #c4c4c4;
+}
+
+.leave-comment form button {
+	font-size: 14px;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-weight: 700;
+	width: 100%;
+	border: none;
+	padding: 14px 0 12px;
+	background: #03e9f4;
+}
+i{
+  color: #03e9f4;
+}
+/* Contact */
+
+.contact-section {
+	background: #151515;
+}
+
+.section-title.contact-title {
+	text-align: left;
+	margin-bottom: 35px;
+}
+
+.contact-widget .cw-text {
+	overflow: hidden;
+	margin-bottom: 35px;
+}
+
+.contact-widget .cw-text i {
+	font-size: 30px;
+	color: #f36100;
+	display: inline-block;
+	height: 65px;
+	width: 65px;
+	background: #363636;
+	border-radius: 50%;
+	line-height: 65px;
+	text-align: center;
+	float: left;
+	margin-right: 20px;
+}
+
+.contact-widget .cw-text p {
+	overflow: hidden;
+	color: #c4c4c4;
+	margin-bottom: 0;
+	padding-top: 10px;
+}
+
+.contact-widget .cw-text ul {
+	overflow: hidden;
+	padding-top: 20px;
+}
+
+.contact-widget .cw-text ul li {
+	list-style: none;
+	font-size: 14px;
+	color: #c4c4c4;
+	margin-right: 25px;
+	display: inline-block;
+	position: relative;
+}
+
+.contact-widget .cw-text ul li:after {
+	position: absolute;
+	right: -18px;
+	top: 0;
+	content: "|";
+	color: #545454;
+}
+
+.contact-widget .cw-text ul li:last-child {
+	margin-right: 0;
+}
+
+.contact-widget .cw-text ul li:last-child:after {
+	display: none;
+}
+
+.contact-widget .cw-text.email p {
+	padding-top: 20px;
+}
+
+.map {
+	height: 550px;
+	margin-top: 35px;
+}
+
+.map iframe {
+	width: 100%;
+}
+
+
+
+

@@ -1,0 +1,10 @@
+@import url("./assets/lib/flaticon/font/flaticon.css");
+@import url("./assets/lib/owlcarousel/assets/owl.carousel.min.css");
+@import url("./assets/css/bootstrap.min.css");
+@import url("./assets/css/style.css");
+@import "node_modules/angular-notifier/styles";
+
+
+body{
+  background-color: #222429;
+}

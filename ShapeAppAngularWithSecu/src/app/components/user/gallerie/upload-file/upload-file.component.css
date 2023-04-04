@@ -1,0 +1,105 @@
+/* /////////////////// GALLERIE //////////////////////////////////// */
+
+div.gallery {
+  margin: 0rem 1rem;
+  border: 1px solid #777;
+  text-align: center;
+
+}
+
+div.gallery:hover {
+  border: 1px solid #03e9f4;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div.gallery .image {
+  height: 12rem;
+  width: 100%;
+  margin: auto;
+}
+
+div.gallery img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+div.desc {
+  padding: 20px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 1rem 1rem ;
+ display: inline-block;
+  width: 25%;
+
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
+
+div.dateGalerie{
+  margin-left: 2rem;
+  color: #03e9f4;
+  font-size: 1.5rem;
+  text-align: left;
+  font-family: 'Alkatra', cursive;
+
+
+}
+
+
+/* //////////////////FIN GALLERY /////////////////////////////////// */
+
+
+
+@media only screen and (max-width: 960px) {
+.responsive {
+  width: 33%;
+
+}
+
+}
+@media only screen and (max-width: 640px) {
+  .responsive {
+    width: 50%;
+
+  }
+
+}
+@media only screen and (max-width: 480px) {
+.responsive {
+  width: 100%;
+  margin: auto;
+}
+
+}
+
+
+
+.label-file {
+    cursor: pointer;
+    color: #00b1ca;
+    font-weight: bold;
+}
+.label-file:hover {
+    color: #25a5c4;
+}
+
+
+.input-file {
+    display: none;
+}
+
+
+
+
+

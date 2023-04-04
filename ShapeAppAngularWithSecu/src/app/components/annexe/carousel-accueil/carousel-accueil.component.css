@@ -1,0 +1,79 @@
+.choseus-section {
+	background: #0a0a0a;
+	padding-bottom: 70px;
+}
+
+.cs-item {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.cs-item:hover span {
+	background: #03e9f4;
+	color: #ffffff;
+}
+
+.cs-item span {
+	height: 90px;
+	width: 90px;
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 10%;
+	display: inline-block;
+	color: #03e9f4;
+	line-height: 90px;
+	text-align: center;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+img {
+	height: 100%;
+	width: 100%;
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 10%;
+	display: inline-block;
+	color: #03e9f4;
+	line-height: 90px;
+	text-align: center;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.cs-item h4 {
+	color: #ffffff;
+	font-size: 22px;
+	font-weight: 600;
+	margin-top: 24px;
+	margin-bottom: 16px;
+}
+
+.section-title {
+	margin-bottom: 45px;
+	text-align: center;
+}
+
+.section-title span {
+	font-size: 16px;
+	color: #03e9f4;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.section-title h2 {
+	color: #ffffff;
+	font-size: 32px;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin-top: 8px;
+}
+
+.spad {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+.btn-primary{
+  border-color: #03e9f4;
+  background-color: #03e9f4
+}

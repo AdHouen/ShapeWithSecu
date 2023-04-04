@@ -1,0 +1,174 @@
+<br>
+<br>
+<h2 class="text-center">Ajouter un entrainement</h2>
+<br>
+<div class="container">
+    <form  [formGroup]="form" (ngSubmit)="create()">
+      	<div class="form-group">
+
+			<!-- Radio choix jour de la semaine  -->
+			<div class="radio">
+				<div class="container radioJour">
+					<input type="radio" value="Lundi" formControlName="jour" id="lundi">
+					<label for="lundi">Lundi</label>
+					<input type="radio" value="Mardi" formControlName="jour" id="mardi">
+					<label for="mardi">Mardi</label>
+					<input type="radio" value="Mercredi" formControlName="jour" id="mercredi">
+					<label for="mercredi">Mercredi</label>
+					<input type="radio" value="Jeudi" formControlName="jour" id="jeudi">
+					<label for="jeudi">Jeudi</label>
+					<input type="radio" value="Vendredi" formControlName="jour" id="vendredi">
+					<label for="vendredi">Vendredi</label>
+					<input type="radio" value="Samedi" formControlName="jour" id="samedi">
+					<label for="samedi">Samedi</label>
+					<input type="radio" value="Dimanche" formControlName="jour" id="dimanche">
+					<label for="dimanche">Dimanche</label>
+				</div>
+			</div>
+        <br>
+
+      <div class="container choixExos">
+        <!-- Choix radio muscle -->
+        <div class="radio" >
+          <div class="container radioMuscle" *ngFor="let m of muscles">
+            <input type="radio" id="muscle_{{m.muscleId}}"  value="{{m.nom}}" formControlName="muscle" (change)="afficherExo(m.muscleId)">
+            <label for="muscle_{{m.muscleId}}">{{m.nom}}</label>
+          </div>
+        </div>
+
+
+        <!-- Choix radio exercice par muscle affichage ou non -->
+
+        <div>
+          <div [class]="'radio'+ (typeMuscle != item.muscleId?' hide':'') "  *ngFor="let item of exercices" >
+            <div class="container radioExercice"  *ngIf="item.muscleId==1" >
+              <input type="radio" id="exerciceEpaule_{{item.exerciceId}}"  value="{{item.nom}}" formControlName="exercice">
+              <label for="exerciceEpaule_{{item.exerciceId}}" >{{item.nom}}</label>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div [class]="'radio'+ (typeMuscle != item.muscleId?' hide':'') "  *ngFor="let item of exercices" >
+            <div class="container radioExercice"  *ngIf="item.muscleId==2" >
+              <input   type="radio" id="exerciceBiceps_{{item.exerciceId}}"  value="{{item.nom}}" formControlName="exercice">
+              <label for="exerciceBiceps_{{item.exerciceId}}" >{{item.nom}}</label>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div [class]="'radio'+ (typeMuscle != item.muscleId?' hide':'') "  *ngFor="let item of exercices" >
+            <div class="container radioExercice"  *ngIf="item.muscleId==3" >
+              <input   type="radio" id="exerciceTriceps_{{item.exerciceId}}"  value="{{item.nom}}" formControlName="exercice">
+              <label for="exerciceTriceps_{{item.exerciceId}}" >{{item.nom}}</label>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div [class]="'radio'+ (typeMuscle != item.muscleId?' hide':'') "  *ngFor="let item of exercices" >
+            <div class="container radioExercice"  *ngIf="item.muscleId==4" >
+              <input   type="radio" id="exercicePectoraux_{{item.exerciceId}}"  value="{{item.nom}}" formControlName="exercice">
+              <label for="exercicePectoraux_{{item.exerciceId}}" >{{item.nom}}</label>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div [class]="'radio'+ (typeMuscle != item.muscleId?' hide':'') "  *ngFor="let item of exercices" >
+            <div class="container radioExercice"  *ngIf="item.muscleId==5" >
+              <input   type="radio" id="exerciceDos_{{item.exerciceId}}"  value="{{item.nom}}" formControlName="exercice">
+              <label for="exerciceDos_{{item.exerciceId}}" >{{item.nom}}</label>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div [class]="'radio'+ (typeMuscle != item.muscleId?' hide':'') "  *ngFor="let item of exercices" >
+            <div class="container radioExercice"  *ngIf="item.muscleId==6" >
+              <input   type="radio" id="exerciceAbdominaux_{{item.exerciceId}}"  value="{{item.nom}}" formControlName="exercice">
+              <label for="exerciceAbdominaux_{{item.exerciceId}}" >{{item.nom}}</label>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div [class]="'radio'+ (typeMuscle != item.muscleId?' hide':'') "  *ngFor="let item of exercices" >
+            <div class="container radioExercice"  *ngIf="item.muscleId==7" >
+              <input   type="radio" id="exerciceFessiers_{{item.exerciceId}}"  value="{{item.nom}}" formControlName="exercice">
+              <label for="exerciceFessiers_{{item.exerciceId}}" >{{item.nom}}</label>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div [class]="'radio'+ (typeMuscle != item.muscleId?' hide':'') "  *ngFor="let item of exercices" >
+            <div class="container radioExercice"  *ngIf="item.muscleId==8" >
+              <input   type="radio" id="exerciceQuadriceps_{{item.exerciceId}}"  value="{{item.nom}}" formControlName="exercice">
+              <label for="exerciceQuadriceps_{{item.exerciceId}}" >{{item.nom}}</label>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div [class]="'radio'+ (typeMuscle != item.muscleId?' hide':'') "  *ngFor="let item of exercices" >
+            <div class="container radioExercice"  *ngIf="item.muscleId==9" >
+              <input   type="radio" id="exerciceIschio_{{item.exerciceId}}"  value="{{item.nom}}" formControlName="exercice">
+              <label for="exerciceIschio_{{item.exerciceId}}" >{{item.nom}}</label>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div [class]="'radio'+ (typeMuscle != item.muscleId?' hide':'') "  *ngFor="let item of exercices" >
+            <div class="container radioExercice"  *ngIf="item.muscleId==10" >
+              <input   type="radio" id="exerciceMollets_{{item.exerciceId}}"  value="{{item.nom}}" formControlName="exercice">
+              <label for="exerciceMollets_{{item.exerciceId}}" >{{item.nom}}</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+        <div class="input-field">
+            <label for="serie">Série</label>
+            <input id="champs" type="text" class="form-control" formControlName="serie" data-length="10">
+        </div>
+        <div class="input-field">
+          <label for="repetition">Répétition</label>
+          <input id="champs" type="text" class="form-control" formControlName="repetition" data-length="10">
+        </div>
+        <div class="input-field">
+          <label for="poids">Poids</label>
+          <input id="champs" type="text" class="form-control" formControlName="poids" data-length="10">
+        </div>
+        <div class="input-field">
+          <label for="temps">Temps</label>
+          <input id="champs" type="text" class="form-control" formControlName="temps" data-length="10">
+        </div>
+        <div class="input-field">
+          <label for="distance">Distance</label>
+          <input id="champs" type="text" class="form-control" formControlName="distance" data-length="10">
+        </div>
+
+        <br>
+        <br>
+        <div class="container buttonSubmit">
+        <button  class="btn btn-success " type="submit" style="align-items: center;">Soumettre</button>
+        </div>
+        <br>
+        <br>
+        <br>
+      </div>
+    </form>
+</div>
+{{form.value | json}}
+
+
+
+
+
+

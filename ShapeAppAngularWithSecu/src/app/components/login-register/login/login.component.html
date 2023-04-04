@@ -1,0 +1,45 @@
+<div class="boxPlacement"> </div>
+<div class="login-box">
+  <h2>Se connecter</h2>
+  <form #loginForm="ngForm" (ngSubmit)="onLogin(loginForm.value)">
+    <div class="user-box">
+      <input type="text" class="form-control" name="username" placeholder="Username" ngModel #usernameInput="ngModel" required >
+      <span class="help-block" style="color:rgba(248, 38, 38, 0.844);" *ngIf="usernameInput.invalid && usernameInput.touched" >Veuillez entrer un username</span>
+        <label>Username</label>
+    </div>
+    <div class="user-box">
+      <input type="password" id="password" placeholder="Password" name="password" ngModel #passwordInput="ngModel" required>
+        <span class="help-block" style="color:rgba(248, 38, 38, 0.844);" *ngIf="passwordInput.invalid && passwordInput.touched" >Veuillez entrer un password</span>
+        <label>Password</label>
+    </div>
+    <button type="submit" [disabled]="showLoading" name="button" id="submit" *ngIf="!showLoading">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      login
+    </button>
+    <button type="button"  routerLink="/register">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Don't have an account?
+    </button>
+    <div class="spinner-border" role="status" *ngIf="showLoading" style="display: inline-block; margin-left: 30%; border-color: #3edcf4; border-right-color: transparent">
+      <span class="sr-only"></span>
+    </div>
+  </form>
+</div>
+<br>
+<br>
+<app-nous-choisir></app-nous-choisir>
+
+
+
+
+
+
+
+
+
