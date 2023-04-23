@@ -2,6 +2,9 @@
     <div class="mb-5 text-center">
         <h3 class="text-uppercase">Liste des exercices</h3>
         <h1 class="display-3 text-uppercase mb-0">Choisis ton muscle</h1>
+        <br>
+        <a routerLink="/addData" class="btn btn-success waves-effect waves-light btn right orange">Ajouter une mesure</a>
+        <br>
     </div>
     <div class="tab-class text-center">
         <ul class="nav nav-pills d-inline-flex justify-content-center bg-dark text-uppercase rounded-pill mb-5">
@@ -10,270 +13,293 @@
             </li>
         </ul>
     </div>
-    <!-- <div class="tab-content " *ngFor="let item of muscles">
+    <!-- Tab mensuration Data -->
+
+    <div class="tab-content " *ngFor="let item of muscles">
 
         <div id="tab-1" class="tab-pane fade p-0 ">
-            <table id="table_id" class="table align-middle  table-striped" >
+            <table id="table_id" class="container" >
+
                 <thead>
-                    <tr>
-                        <th scope="col">Date</th>
-                        <th scope="col">Mesure</th>
-                        <th scope="col">Evolution</th>
-                        <th scope="col">Edit</th>
-                        <th scope="col">Remove</th>
-                    </tr>
+                <tr>
+                    <th><h1>Date</h1></th>
+                    <th><h1>Mesure</h1></th>
+                    <th><h1>Evolution</h1></th>
+                    <th><h1>Edit</h1></th>
+                    <th><h1>Remove</h1></th>
+                </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let item of mensurations">
-                        <td *ngIf="item.muscleId==1">{{item.date}}</td>
-                        <td *ngIf="item.muscleId==1">{{item.valeur}}</td>
-                        <td *ngIf="item.muscleId==1">A voir</td>
-                        <td *ngIf="item.muscleId==1">
-                            <button class="btn btn-lg btn-outline-info" (click)="open(editMensuration, item)" ><i class="fas fa-edit"></i> Edit</button>
-                        </td>
-                        <td *ngIf="item.muscleId==1">
-                            <button class="btn btn-lg btn-outline-danger" routerLink='/data/{{item.mensurationId}}'><i class="far fa-trash-alt"></i> Remove</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div id="tab-2" class="tab-pane fade p-0 ">
-            <table id="table_id" class="table align-middle  table-striped" >
-                <thead>
-                    <tr>
-                        <th scope="col">Date</th>
-                        <th scope="col">Mesure</th>
-                        <th scope="col">Evolution</th>
-                        <th scope="col">Edit</th>
-                        <th scope="col">Remove</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let item of mensurations">
-                        <td *ngIf="item.muscleId==2">{{item.date}}</td>
-                        <td *ngIf="item.muscleId==2">{{item.valeur}}</td>
-                        <td *ngIf="item.muscleId==2">A voir</td>
-                        <td *ngIf="item.muscleId==2">
-                            <button class="btn btn-lg btn-outline-info" (click)="open(editMensuration, item)" ><i class="fas fa-edit"></i> Edit</button>
-                        </td>
-                        <td *ngIf="item.muscleId==2">
-                            <button class="btn btn-lg btn-outline-danger" routerLink='/data/{{item.mensurationId}}'><i class="far fa-trash-alt"></i> Remove</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div id="tab-3" class="tab-pane fade p-0 ">
-            <table id="table_id" class="table align-middle  table-striped" >
-                <thead>
-                    <tr>
-                        <th scope="col">Date</th>
-                        <th scope="col">Mesure</th>
-                        <th scope="col">Evolution</th>
-                        <th scope="col">Edit</th>
-                        <th scope="col">Remove</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let item of mensurations">
-                        <td *ngIf="item.muscleId==3">{{item.date}}</td>
-                        <td *ngIf="item.muscleId==3">{{item.valeur}}</td>
-                        <td *ngIf="item.muscleId==3">A voir</td>
-                        <td *ngIf="item.muscleId==3">
-                            <button class="btn btn-lg btn-outline-info" (click)="open(editMensuration, item)" ><i class="fas fa-edit"></i> Edit</button>
-                        </td>
-                        <td *ngIf="item.muscleId==3">
-                            <button class="btn btn-lg btn-outline-danger" routerLink='/data/{{item.mensurationId}}'><i class="far fa-trash-alt"></i> Remove</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div id="tab-4" class="tab-pane fade p-0 ">
-            <table id="table_id" class="table align-middle  table-striped" >
-                <thead>
-                    <tr>
-                        <th scope="col">Date</th>
-                        <th scope="col">Mesure</th>
-                        <th scope="col">Evolution</th>
-                        <th scope="col">Edit</th>
-                        <th scope="col">Remove</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let item of mensurations">
-                        <td *ngIf="item.muscleId==4">{{item.date}}</td>
-                        <td *ngIf="item.muscleId==4">{{item.valeur}}</td>
-                        <td *ngIf="item.muscleId==4">A voir</td>
-                        <td *ngIf="item.muscleId==4">
-                            <button class="btn btn-lg btn-outline-info" (click)="open(editMensuration, item)" ><i class="fas fa-edit"></i> Edit</button>
-                        </td>
-                        <td *ngIf="item.muscleId==4">
-                            <button class="btn btn-lg btn-outline-danger" routerLink='/data/{{item.mensurationId}}'><i class="far fa-trash-alt"></i> Remove</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div id="tab-5" class="tab-pane fade p-0 ">
-            <table id="table_id" class="table align-middle  table-striped" >
-                <thead>
-                    <tr>
-                        <th scope="col">Date</th>
-                        <th scope="col">Mesure</th>
-                        <th scope="col">Evolution</th>
-                        <th scope="col">Edit</th>
-                        <th scope="col">Remove</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let item of mensurations">
-                        <td *ngIf="item.muscleId==5">{{item.date}}</td>
-                        <td *ngIf="item.muscleId==5">{{item.valeur}}</td>
-                        <td *ngIf="item.muscleId==5">A voir</td>
-                        <td *ngIf="item.muscleId==5">
-                            <button class="btn btn-lg btn-outline-info" (click)="open(editMensuration, item)" ><i class="fas fa-edit"></i> Edit</button>
-                        </td>
-                        <td *ngIf="item.muscleId==5">
-                            <button class="btn btn-lg btn-outline-danger" routerLink='/data/{{item.mensurationId}}'><i class="far fa-trash-alt"></i> Remove</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div id="tab-6" class="tab-pane fade p-0 ">
-            <table id="table_id" class="table align-middle  table-striped" >
-                <thead>
-                    <tr>
-                        <th scope="col">Date</th>
-                        <th scope="col">Mesure</th>
-                        <th scope="col">Evolution</th>
-                        <th scope="col">Edit</th>
-                        <th scope="col">Remove</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let item of mensurations">
-                        <td *ngIf="item.muscleId==6">{{item.date}}</td>
-                        <td *ngIf="item.muscleId==6">{{item.valeur}}</td>
-                        <td *ngIf="item.muscleId==6">A voir</td>
-                        <td *ngIf="item.muscleId==6">
-                            <button class="btn btn-lg btn-outline-info" (click)="open(editMensuration, item)" ><i class="fas fa-edit"></i> Edit</button>
-                        </td>
-                        <td *ngIf="item.muscleId==6">
-                            <button class="btn btn-lg btn-outline-danger" routerLink='/data/{{item.mensurationId}}'><i class="far fa-trash-alt"></i> Remove</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div id="tab-7" class="tab-pane fade p-0 ">
-            <table id="table_id" class="table align-middle  table-striped" >
-                <thead>
-                    <tr>
-                        <th scope="col">Date</th>
-                        <th scope="col">Mesure</th>
-                        <th scope="col">Evolution</th>
-                        <th scope="col">Edit</th>
-                        <th scope="col">Remove</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let item of mensurations">
-                        <td *ngIf="item.muscleId==7">{{item.date}}</td>
-                        <td *ngIf="item.muscleId==7">{{item.valeur}}</td>
-                        <td *ngIf="item.muscleId==7">A voir</td>
-                        <td *ngIf="item.muscleId==7">
-                            <button class="btn btn-lg btn-outline-info" (click)="open(editMensuration, item)" ><i class="fas fa-edit"></i> Edit</button>
-                        </td>
-                        <td *ngIf="item.muscleId==7">
-                            <button class="btn btn-lg btn-outline-danger" routerLink='/data/{{item.mensurationId}}'><i class="far fa-trash-alt"></i> Remove</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div id="tab-8" class="tab-pane fade p-0 ">
-            <table id="table_id" class="table align-middle  table-striped" >
-                <thead>
-                    <tr>
-                        <th scope="col">Date</th>
-                        <th scope="col">Mesure</th>
-                        <th scope="col">Evolution</th>
-                        <th scope="col">Edit</th>
-                        <th scope="col">Remove</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let item of mensurations">
-                        <td *ngIf="item.muscleId==8">{{item.date}}</td>
-                        <td *ngIf="item.muscleId==8">{{item.valeur}}</td>
-                        <td *ngIf="item.muscleId==8">A voir</td>
-                        <td *ngIf="item.muscleId==8">
-                            <button class="btn btn-lg btn-outline-info" (click)="open(editMensuration, item)" ><i class="fas fa-edit"></i> Edit</button>
-                        </td>
-                        <td *ngIf="item.muscleId==8">
-                            <button class="btn btn-lg btn-outline-danger" routerLink='/data/{{item.mensurationId}}'><i class="far fa-trash-alt"></i> Remove</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div id="tab-9" class="tab-pane fade p-0 ">
-            <table id="table_id" class="table align-middle  table-striped" >
-                <thead>
-                    <tr>
-                        <th scope="col">Date</th>
-                        <th scope="col">Mesure</th>
-                        <th scope="col">Evolution</th>
-                        <th scope="col">Edit</th>
-                        <th scope="col">Remove</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let item of mensurations">
-                        <td *ngIf="item.muscleId==9">{{item.date}}</td>
-                        <td *ngIf="item.muscleId==9">{{item.valeur}}</td>
-                        <td *ngIf="item.muscleId==9">A voir</td>
-                        <td *ngIf="item.muscleId==9">
-                            <button class="btn btn-lg btn-outline-info" (click)="open(editMensuration, item)" ><i class="fas fa-edit"></i> Edit</button>
-                        </td>
-                        <td *ngIf="item.muscleId==9">
-                            <button class="btn btn-lg btn-outline-danger" routerLink='/data/{{item.mensurationId}}'><i class="far fa-trash-alt"></i> Remove</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div id="tab-10" class="tab-pane fade p-0 ">
-            <table id="table_id" class="table align-middle  table-striped" >
-                <thead>
-                    <tr>
-                        <th scope="col">Date</th>
-                        <th scope="col">Mesure</th>
-                        <th scope="col">Evolution</th>
-                        <th scope="col">Edit</th>
-                        <th scope="col">Remove</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let item of mensurations">
-                        <td *ngIf="item.muscleId==10">{{item.date}}</td>
-                        <td *ngIf="item.muscleId==10">{{item.valeur}}</td>
-                        <td *ngIf="item.muscleId==10">A voir</td>
-                        <td *ngIf="item.muscleId==10">
-                            <button class="btn btn-lg btn-outline-info" (click)="open(editMensuration, item)" ><i class="fas fa-edit"></i> Edit</button>
-                        </td>
-                        <td *ngIf="item.muscleId==10">
-                            <button class="btn btn-lg btn-outline-danger" routerLink='/data/{{item.mensurationId}}'><i class="far fa-trash-alt"></i> Remove</button>
-                        </td>
-                    </tr>
+                <tr *ngFor="let item of mensurations">
+                    <td id="date" *ngIf="item.muscleId==1">{{item.date}}</td>
+                    <td *ngIf="item.muscleId==1">{{item.valeur}}</td>
+                    <td *ngIf="item.muscleId==1">A voir</td>
+                    <td  *ngIf="item.muscleId==1">
+                        <button class="btn btn-sm "  (click)="open(editMensuration, item)" ><img src="../../../../../../assets/img/icones/edit.gif" alt=""></button>
+                    </td>
+                    <td *ngIf="item.muscleId==1">
+                        <button class="btn btn-sm "routerLink='/data/{{item.mensurationId}}'><img src="../../../../../../assets/img/icones/delete.gif" alt=""></button>
+                    </td>
+                </tr>
                 </tbody>
             </table>
         </div>
 
-    </div> -->
+        <div id="tab-2" class="tab-pane fade p-0 ">
+            <table id="table_id" class="container" >
+
+                <thead>
+                <tr>
+                    <th><h1>Date</h1></th>
+                    <th><h1>Mesure</h1></th>
+                    <th><h1>Evolution</h1></th>
+                    <th><h1>Edit</h1></th>
+                    <th><h1>Remove</h1></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let item of mensurations">
+                    <td id="date" *ngIf="item.muscleId==2">{{item.date}}</td>
+                    <td *ngIf="item.muscleId==2">{{item.valeur}}</td>
+                    <td *ngIf="item.muscleId==2">A voir</td>
+                    <td  *ngIf="item.muscleId==2">
+                        <button class="btn btn-sm "  (click)="open(editMensuration, item)" ><img src="../../../../../../assets/img/icones/edit.gif" alt=""></button>
+                    </td>
+                    <td *ngIf="item.muscleId==2">
+                        <button class="btn btn-sm "routerLink='/data/{{item.mensurationId}}'><img src="../../../../../../assets/img/icones/delete.gif" alt=""></button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="tab-3" class="tab-pane fade p-0 ">
+            <table id="table_id" class="container" >
+
+                <thead>
+                <tr>
+                    <th><h1>Date</h1></th>
+                    <th><h1>Mesure</h1></th>
+                    <th><h1>Evolution</h1></th>
+                    <th><h1>Edit</h1></th>
+                    <th><h1>Remove</h1></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let item of mensurations">
+                    <td id="date" *ngIf="item.muscleId==3">{{item.date}}</td>
+                    <td *ngIf="item.muscleId==3">{{item.valeur}}</td>
+                    <td *ngIf="item.muscleId==3">A voir</td>
+                    <td  *ngIf="item.muscleId==3">
+                        <button class="btn btn-sm "  (click)="open(editMensuration, item)" ><img src="../../../../../../assets/img/icones/edit.gif" alt=""></button>
+                    </td>
+                    <td *ngIf="item.muscleId==3">
+                        <button class="btn btn-sm "routerLink='/data/{{item.mensurationId}}'><img src="../../../../../../assets/img/icones/delete.gif" alt=""></button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="tab-4" class="tab-pane fade p-0 ">
+            <table id="table_id" class="container" >
+
+                <thead>
+                <tr>
+                    <th><h1>Date</h1></th>
+                    <th><h1>Mesure</h1></th>
+                    <th><h1>Evolution</h1></th>
+                    <th><h1>Edit</h1></th>
+                    <th><h1>Remove</h1></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let item of mensurations">
+                    <td id="date" *ngIf="item.muscleId==4">{{item.date}}</td>
+                    <td *ngIf="item.muscleId==4">{{item.valeur}}</td>
+                    <td *ngIf="item.muscleId==4">A voir</td>
+                    <td  *ngIf="item.muscleId==4">
+                        <button class="btn btn-sm "  (click)="open(editMensuration, item)" ><img src="../../../../../../assets/img/icones/edit.gif" alt=""></button>
+                    </td>
+                    <td *ngIf="item.muscleId==4">
+                        <button class="btn btn-sm "routerLink='/data/{{item.mensurationId}}'><img src="../../../../../../assets/img/icones/delete.gif" alt=""></button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="tab-5" class="tab-pane fade p-0 ">
+            <table id="table_id" class="container" >
+
+                <thead>
+                <tr>
+                    <th><h1>Date</h1></th>
+                    <th><h1>Mesure</h1></th>
+                    <th><h1>Evolution</h1></th>
+                    <th><h1>Edit</h1></th>
+                    <th><h1>Remove</h1></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let item of mensurations">
+                    <td id="date" *ngIf="item.muscleId==5">{{item.date}}</td>
+                    <td *ngIf="item.muscleId==5">{{item.valeur}}</td>
+                    <td *ngIf="item.muscleId==5">A voir</td>
+                    <td  *ngIf="item.muscleId==5">
+                        <button class="btn btn-sm "  (click)="open(editMensuration, item)" ><img src="../../../../../../assets/img/icones/edit.gif" alt=""></button>
+                    </td>
+                    <td *ngIf="item.muscleId==5">
+                        <button class="btn btn-sm "routerLink='/data/{{item.mensurationId}}'><img src="../../../../../../assets/img/icones/delete.gif" alt=""></button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="tab-6" class="tab-pane fade p-0 ">
+            <table id="table_id" class="container" >
+
+                <thead>
+                <tr>
+                    <th><h1>Date</h1></th>
+                    <th><h1>Mesure</h1></th>
+                    <th><h1>Evolution</h1></th>
+                    <th><h1>Edit</h1></th>
+                    <th><h1>Remove</h1></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let item of mensurations">
+                    <td id="date" *ngIf="item.muscleId==6">{{item.date}}</td>
+                    <td *ngIf="item.muscleId==6">{{item.valeur}}</td>
+                    <td *ngIf="item.muscleId==6">A voir</td>
+                    <td  *ngIf="item.muscleId==6">
+                        <button class="btn btn-sm "  (click)="open(editMensuration, item)" ><img src="../../../../../../assets/img/icones/edit.gif" alt=""></button>
+                    </td>
+                    <td *ngIf="item.muscleId==6">
+                        <button class="btn btn-sm "routerLink='/data/{{item.mensurationId}}'><img src="../../../../../../assets/img/icones/delete.gif" alt=""></button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="tab-7" class="tab-pane fade p-0 ">
+            <table id="table_id" class="container" >
+
+                <thead>
+                <tr>
+                    <th><h1>Date</h1></th>
+                    <th><h1>Mesure</h1></th>
+                    <th><h1>Evolution</h1></th>
+                    <th><h1>Edit</h1></th>
+                    <th><h1>Remove</h1></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let item of mensurations">
+                    <td id="date" *ngIf="item.muscleId==7">{{item.date}}</td>
+                    <td *ngIf="item.muscleId==7">{{item.valeur}}</td>
+                    <td *ngIf="item.muscleId==7">A voir</td>
+                    <td  *ngIf="item.muscleId==7">
+                        <button class="btn btn-sm "  (click)="open(editMensuration, item)" ><img src="../../../../../../assets/img/icones/edit.gif" alt=""></button>
+                    </td>
+                    <td *ngIf="item.muscleId==7">
+                        <button class="btn btn-sm "routerLink='/data/{{item.mensurationId}}'><img src="../../../../../../assets/img/icones/delete.gif" alt=""></button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="tab-8" class="tab-pane fade p-0 ">
+            <table id="table_id" class="container" >
+
+                <thead>
+                <tr>
+                    <th><h1>Date</h1></th>
+                    <th><h1>Mesure</h1></th>
+                    <th><h1>Evolution</h1></th>
+                    <th><h1>Edit</h1></th>
+                    <th><h1>Remove</h1></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let item of mensurations">
+                    <td id="date" *ngIf="item.muscleId==8">{{item.date}}</td>
+                    <td *ngIf="item.muscleId==8">{{item.valeur}}</td>
+                    <td *ngIf="item.muscleId==8">A voir</td>
+                    <td  *ngIf="item.muscleId==8">
+                        <button class="btn btn-sm "  (click)="open(editMensuration, item)" ><img src="../../../../../../assets/img/icones/edit.gif" alt=""></button>
+                    </td>
+                    <td *ngIf="item.muscleId==8">
+                        <button class="btn btn-sm "routerLink='/data/{{item.mensurationId}}'><img src="../../../../../../assets/img/icones/delete.gif" alt=""></button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="tab-9" class="tab-pane fade p-0 ">
+            <table id="table_id" class="container" >
+
+                <thead>
+                <tr>
+                    <th><h1>Date</h1></th>
+                    <th><h1>Mesure</h1></th>
+                    <th><h1>Evolution</h1></th>
+                    <th><h1>Edit</h1></th>
+                    <th><h1>Remove</h1></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let item of mensurations">
+                    <td id="date" *ngIf="item.muscleId==9">{{item.date}}</td>
+                    <td *ngIf="item.muscleId==9">{{item.valeur}}</td>
+                    <td *ngIf="item.muscleId==9">A voir</td>
+                    <td  *ngIf="item.muscleId==9">
+                        <button class="btn btn-sm "  (click)="open(editMensuration, item)" ><img src="../../../../../../assets/img/icones/edit.gif" alt=""></button>
+                    </td>
+                    <td *ngIf="item.muscleId==9">
+                        <button class="btn btn-sm "routerLink='/data/{{item.mensurationId}}'><img src="../../../../../../assets/img/icones/delete.gif" alt=""></button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="tab-10" class="tab-pane fade p-0 ">
+            <table id="table_id" class="container" >
+
+                <thead>
+                <tr>
+                    <th><h1>Date</h1></th>
+                    <th><h1>Mesure</h1></th>
+                    <th><h1>Evolution</h1></th>
+                    <th><h1>Edit</h1></th>
+                    <th><h1>Remove</h1></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let item of mensurations">
+                    <td id="date" *ngIf="item.muscleId==10">{{item.date}}</td>
+                    <td *ngIf="item.muscleId==10">{{item.valeur}}</td>
+                    <td *ngIf="item.muscleId==10">A voir</td>
+                    <td  *ngIf="item.muscleId==10">
+                        <button class="btn btn-sm "  (click)="open(editMensuration, item)" ><img src="../../../../../../assets/img/icones/edit.gif" alt=""></button>
+                    </td>
+                    <td *ngIf="item.muscleId==10">
+                        <button class="btn btn-sm "routerLink='/data/{{item.mensurationId}}'><img src="../../../../../../assets/img/icones/delete.gif" alt=""></button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+
 </div>
 
 
@@ -303,292 +329,7 @@
   </div>
 </ng-template>
 
-<!-- Tab mensuration Data -->
 
-<div class="tab-content " *ngFor="let item of muscles">
-
-    <div id="tab-1" class="tab-pane fade p-0 ">
-        <table id="table_id" class="container" >
-
-            <thead>
-            <tr>
-                <th><h1>Date</h1></th>
-                <th><h1>Mesure</h1></th>
-                <th><h1>Evolution</h1></th>
-                <th><h1>Edit</h1></th>
-                <th><h1>Remove</h1></th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr *ngFor="let item of mensurations">
-                <td id="date" *ngIf="item.muscleId==1">{{item.date}}</td>
-                <td *ngIf="item.muscleId==1">{{item.valeur}}</td>
-                <td *ngIf="item.muscleId==1">A voir</td>
-                <td  *ngIf="item.muscleId==1">
-                    <button class="btn btn-sm "  (click)="open(editMensuration, item)" ><img src="../../../../../../assets/img/icones/edit.gif" alt=""></button>
-                </td>
-                <td *ngIf="item.muscleId==1">
-                    <button class="btn btn-sm "routerLink='/data/{{item.mensurationId}}'><img src="../../../../../../assets/img/icones/delete.gif" alt=""></button>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <div id="tab-2" class="tab-pane fade p-0 ">
-        <table id="table_id" class="container" >
-
-            <thead>
-            <tr>
-                <th><h1>Date</h1></th>
-                <th><h1>Mesure</h1></th>
-                <th><h1>Evolution</h1></th>
-                <th><h1>Edit</h1></th>
-                <th><h1>Remove</h1></th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr *ngFor="let item of mensurations">
-                <td id="date" *ngIf="item.muscleId==2">{{item.date}}</td>
-                <td *ngIf="item.muscleId==2">{{item.valeur}}</td>
-                <td *ngIf="item.muscleId==2">A voir</td>
-                <td  *ngIf="item.muscleId==2">
-                    <button class="btn btn-sm "  (click)="open(editMensuration, item)" ><img src="../../../../../../assets/img/icones/edit.gif" alt=""></button>
-                </td>
-                <td *ngIf="item.muscleId==2">
-                    <button class="btn btn-sm "routerLink='/data/{{item.mensurationId}}'><img src="../../../../../../assets/img/icones/delete.gif" alt=""></button>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <div id="tab-3" class="tab-pane fade p-0 ">
-        <table id="table_id" class="container" >
-
-            <thead>
-            <tr>
-                <th><h1>Date</h1></th>
-                <th><h1>Mesure</h1></th>
-                <th><h1>Evolution</h1></th>
-                <th><h1>Edit</h1></th>
-                <th><h1>Remove</h1></th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr *ngFor="let item of mensurations">
-                <td id="date" *ngIf="item.muscleId==3">{{item.date}}</td>
-                <td *ngIf="item.muscleId==3">{{item.valeur}}</td>
-                <td *ngIf="item.muscleId==3">A voir</td>
-                <td  *ngIf="item.muscleId==3">
-                    <button class="btn btn-sm "  (click)="open(editMensuration, item)" ><img src="../../../../../../assets/img/icones/edit.gif" alt=""></button>
-                </td>
-                <td *ngIf="item.muscleId==3">
-                    <button class="btn btn-sm "routerLink='/data/{{item.mensurationId}}'><img src="../../../../../../assets/img/icones/delete.gif" alt=""></button>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <div id="tab-4" class="tab-pane fade p-0 ">
-        <table id="table_id" class="container" >
-
-            <thead>
-            <tr>
-                <th><h1>Date</h1></th>
-                <th><h1>Mesure</h1></th>
-                <th><h1>Evolution</h1></th>
-                <th><h1>Edit</h1></th>
-                <th><h1>Remove</h1></th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr *ngFor="let item of mensurations">
-                <td id="date" *ngIf="item.muscleId==4">{{item.date}}</td>
-                <td *ngIf="item.muscleId==4">{{item.valeur}}</td>
-                <td *ngIf="item.muscleId==4">A voir</td>
-                <td  *ngIf="item.muscleId==4">
-                    <button class="btn btn-sm "  (click)="open(editMensuration, item)" ><img src="../../../../../../assets/img/icones/edit.gif" alt=""></button>
-                </td>
-                <td *ngIf="item.muscleId==4">
-                    <button class="btn btn-sm "routerLink='/data/{{item.mensurationId}}'><img src="../../../../../../assets/img/icones/delete.gif" alt=""></button>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <div id="tab-5" class="tab-pane fade p-0 ">
-        <table id="table_id" class="container" >
-
-            <thead>
-            <tr>
-                <th><h1>Date</h1></th>
-                <th><h1>Mesure</h1></th>
-                <th><h1>Evolution</h1></th>
-                <th><h1>Edit</h1></th>
-                <th><h1>Remove</h1></th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr *ngFor="let item of mensurations">
-                <td id="date" *ngIf="item.muscleId==5">{{item.date}}</td>
-                <td *ngIf="item.muscleId==5">{{item.valeur}}</td>
-                <td *ngIf="item.muscleId==5">A voir</td>
-                <td  *ngIf="item.muscleId==5">
-                    <button class="btn btn-sm "  (click)="open(editMensuration, item)" ><img src="../../../../../../assets/img/icones/edit.gif" alt=""></button>
-                </td>
-                <td *ngIf="item.muscleId==5">
-                    <button class="btn btn-sm "routerLink='/data/{{item.mensurationId}}'><img src="../../../../../../assets/img/icones/delete.gif" alt=""></button>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <div id="tab-6" class="tab-pane fade p-0 ">
-        <table id="table_id" class="container" >
-
-            <thead>
-            <tr>
-                <th><h1>Date</h1></th>
-                <th><h1>Mesure</h1></th>
-                <th><h1>Evolution</h1></th>
-                <th><h1>Edit</h1></th>
-                <th><h1>Remove</h1></th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr *ngFor="let item of mensurations">
-                <td id="date" *ngIf="item.muscleId==6">{{item.date}}</td>
-                <td *ngIf="item.muscleId==6">{{item.valeur}}</td>
-                <td *ngIf="item.muscleId==6">A voir</td>
-                <td  *ngIf="item.muscleId==6">
-                    <button class="btn btn-sm "  (click)="open(editMensuration, item)" ><img src="../../../../../../assets/img/icones/edit.gif" alt=""></button>
-                </td>
-                <td *ngIf="item.muscleId==6">
-                    <button class="btn btn-sm "routerLink='/data/{{item.mensurationId}}'><img src="../../../../../../assets/img/icones/delete.gif" alt=""></button>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <div id="tab-7" class="tab-pane fade p-0 ">
-        <table id="table_id" class="container" >
-
-            <thead>
-            <tr>
-                <th><h1>Date</h1></th>
-                <th><h1>Mesure</h1></th>
-                <th><h1>Evolution</h1></th>
-                <th><h1>Edit</h1></th>
-                <th><h1>Remove</h1></th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr *ngFor="let item of mensurations">
-                <td id="date" *ngIf="item.muscleId==7">{{item.date}}</td>
-                <td *ngIf="item.muscleId==7">{{item.valeur}}</td>
-                <td *ngIf="item.muscleId==7">A voir</td>
-                <td  *ngIf="item.muscleId==7">
-                    <button class="btn btn-sm "  (click)="open(editMensuration, item)" ><img src="../../../../../../assets/img/icones/edit.gif" alt=""></button>
-                </td>
-                <td *ngIf="item.muscleId==7">
-                    <button class="btn btn-sm "routerLink='/data/{{item.mensurationId}}'><img src="../../../../../../assets/img/icones/delete.gif" alt=""></button>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <div id="tab-8" class="tab-pane fade p-0 ">
-        <table id="table_id" class="container" >
-
-            <thead>
-            <tr>
-                <th><h1>Date</h1></th>
-                <th><h1>Mesure</h1></th>
-                <th><h1>Evolution</h1></th>
-                <th><h1>Edit</h1></th>
-                <th><h1>Remove</h1></th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr *ngFor="let item of mensurations">
-                <td id="date" *ngIf="item.muscleId==8">{{item.date}}</td>
-                <td *ngIf="item.muscleId==8">{{item.valeur}}</td>
-                <td *ngIf="item.muscleId==8">A voir</td>
-                <td  *ngIf="item.muscleId==8">
-                    <button class="btn btn-sm "  (click)="open(editMensuration, item)" ><img src="../../../../../../assets/img/icones/edit.gif" alt=""></button>
-                </td>
-                <td *ngIf="item.muscleId==8">
-                    <button class="btn btn-sm "routerLink='/data/{{item.mensurationId}}'><img src="../../../../../../assets/img/icones/delete.gif" alt=""></button>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <div id="tab-9" class="tab-pane fade p-0 ">
-        <table id="table_id" class="container" >
-
-            <thead>
-            <tr>
-                <th><h1>Date</h1></th>
-                <th><h1>Mesure</h1></th>
-                <th><h1>Evolution</h1></th>
-                <th><h1>Edit</h1></th>
-                <th><h1>Remove</h1></th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr *ngFor="let item of mensurations">
-                <td id="date" *ngIf="item.muscleId==9">{{item.date}}</td>
-                <td *ngIf="item.muscleId==9">{{item.valeur}}</td>
-                <td *ngIf="item.muscleId==9">A voir</td>
-                <td  *ngIf="item.muscleId==9">
-                    <button class="btn btn-sm "  (click)="open(editMensuration, item)" ><img src="../../../../../../assets/img/icones/edit.gif" alt=""></button>
-                </td>
-                <td *ngIf="item.muscleId==9">
-                    <button class="btn btn-sm "routerLink='/data/{{item.mensurationId}}'><img src="../../../../../../assets/img/icones/delete.gif" alt=""></button>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <div id="tab-10" class="tab-pane fade p-0 ">
-        <table id="table_id" class="container" >
-
-            <thead>
-            <tr>
-                <th><h1>Date</h1></th>
-                <th><h1>Mesure</h1></th>
-                <th><h1>Evolution</h1></th>
-                <th><h1>Edit</h1></th>
-                <th><h1>Remove</h1></th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr *ngFor="let item of mensurations">
-                <td id="date" *ngIf="item.muscleId==10">{{item.date}}</td>
-                <td *ngIf="item.muscleId==10">{{item.valeur}}</td>
-                <td *ngIf="item.muscleId==10">A voir</td>
-                <td  *ngIf="item.muscleId==10">
-                    <button class="btn btn-sm "  (click)="open(editMensuration, item)" ><img src="../../../../../../assets/img/icones/edit.gif" alt=""></button>
-                </td>
-                <td *ngIf="item.muscleId==10">
-                    <button class="btn btn-sm "routerLink='/data/{{item.mensurationId}}'><img src="../../../../../../assets/img/icones/delete.gif" alt=""></button>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-
-
-</div>
 
 
 

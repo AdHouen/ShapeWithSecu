@@ -1,3 +1,4 @@
+import { AddDataComponent } from './components/user/mensuration/data/add-data/add-data.component';
 import { RegisterComponent } from './components/login-register/register/register.component';
 import { ContactComponent } from './components/annexe/contact/contact.component';
 import { LoginComponent } from './components/login-register/login/login.component';
@@ -17,6 +18,7 @@ import { NgModule } from '@angular/core';
 const routes: Routes = [
 
   {path: 'accueil',component:AccueilComponent},// Accueil
+  {path: '',component:AccueilComponent},// Accueil
   {path: 'login',component:LoginComponent},// Login
   {path: 'register',component:RegisterComponent},// Register
   {path: 'contact',component:ContactComponent},// Cobntact
@@ -30,6 +32,7 @@ const routes: Routes = [
   {path: 'galerie' ,component:UploadFileComponent },// Galerie
   {path: 'data' ,component: ListDataComponent },// Mensuration
   {path: 'data/:id' ,component: ListDataComponent },
+  {path: 'addData' ,component: AddDataComponent},
 
 
 
