@@ -1,6 +1,6 @@
 .tab-content  {
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 5%;
+  margin-right: 5%;
 
 }
 
@@ -13,4 +13,49 @@ tr {
 h5
 {
   color: #03e9f4;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #fff;
+  background-color: #03e9f4;
+}
+
+@media (max-width: 500px) {
+  .container td:nth-child(6),
+  .container th:nth-child(6) { display: none; }
+  #date {
+    font-size: 10px;
+  }
+
+  img{
+    width: 50%;
+  }
+  .tab-content  {
+    margin-left: 2%;
+    margin-right: 2%;
+
+  }
+  .container th  {
+    width: 5rem;
+  }
+  td {
+    font-size: 0.5em;
+  }
+  .container th h1  {
+  font-size: 0.7em;
+  }
+}
+
+ .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #fff;
+  background-color: #03e9f4;
+}
+
+img
+{
+  width: 2rem;
+}
+
+.modal-header {
+  width: 50%;
+
 }

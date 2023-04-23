@@ -34,7 +34,9 @@ h2, h3,h4{
 
 .button:focus {
     outline: 0;
-    background-color: #0d1728;
+    background-color: #108596;
+    color: #ffffff;
+
 }
 
 .max-550 {
@@ -101,6 +103,7 @@ h2, h3,h4{
 	border-right: 1px solid #363636;
 	padding: 1rem 5rem;
 }
+
 
 
 

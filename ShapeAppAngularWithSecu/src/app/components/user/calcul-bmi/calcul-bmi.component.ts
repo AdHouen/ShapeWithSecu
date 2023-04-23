@@ -29,19 +29,19 @@ export class CalculBmiComponent implements OnInit{
       let imc : any = form.weight.value / ((form.height.value / 100) * (form.height.value / 100));
       let imcText;
       if (imc <= 18.5) {
-          imcText = 'Underweight';
+          imcText = 'Sous-pondération';
       } else if (imc > 18.5 && imc <= 25) {
-          imcText = 'Normal Weight';
+          imcText = 'En bonne santé';
       } else if (imc > 25 && imc <= 30) {
-          imcText = 'Overweight';
+          imcText = 'Surcharge pondérale';
       } else if (imc > 30 && imc <= 35) {
-          imcText = 'Level 1 obesity';
+          imcText = 'Obèsité Niveau 1';
       } else if (imc > 35 && imc <= 40) {
-          imcText = 'Level 2 obesity';
+          imcText = 'Obèsité Niveau 2';
       } else if (imc > 40 && imc <= 50) {
-          imcText = 'Level 3 obesity';
+          imcText = 'Obèsité Niveau 3';
       } else if (imc > 50) {
-          imcText = 'Level 4 obesity';
+          imcText = 'Obèsité Niveau 4';
       }
       if (imc <= 15) {
           imcBar.style.width = '0%';

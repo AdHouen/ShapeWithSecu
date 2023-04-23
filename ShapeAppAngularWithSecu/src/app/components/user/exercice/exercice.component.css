@@ -1,6 +1,6 @@
 .tab-content  {
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 15%;
+  margin-right: 15%;
 
 }
 
@@ -10,4 +10,7 @@ tr {
   color: rgb(255, 255, 255);
 }
 
-
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #fff;
+  background-color: #03e9f4;
+}

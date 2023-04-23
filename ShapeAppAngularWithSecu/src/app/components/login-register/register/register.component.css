@@ -41,3 +41,10 @@ body{
   border-color: #5369f8;
   color: #fff;
 }
+
+img {
+  height: auto;
+  width: 100%;
+  margin-top: 50%;
+  margin-bottom: 50%;
+}
