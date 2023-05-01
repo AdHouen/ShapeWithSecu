@@ -1,1 +1,79 @@
-<p>add-data works!</p>
+<!-- <br>
+<br>
+<h2 class="text-center">Ajouter un entrainement</h2>
+<br>
+<div class="container">
+    <form  [formGroup]="form" (ngSubmit)="create()">
+      	<div class="form-group">
+
+      <div class="container radioJour">
+
+        <div class="radio" >
+          <div class="container radioMuscle" *ngFor="let m of muscles">
+            <input type="radio" id="muscle_{{m.muscleId}}"  value="{{m.nom}}" formControlName="muscle">
+            <label for="muscle_{{m.muscleId}}">{{m.nom}}</label>
+          </div>
+        </div>
+      </div>
+</div>
+
+<br>
+<br>
+<H2 class="text-center">Modifier une mensuration</H2>
+<div class="container border">
+    <form  [formGroup]="form" (ngSubmit)="create()">
+        <div class="form-group">
+          <div class="input-field col s16">
+           <label for="idUser">Date</label>
+            <input type="text" name="" id="date" class="form-control" formControlName="date" data-length="10">
+          </div>
+          <div class="input-field col s16">
+            <label for="idUser">Valeur</label>
+            <input type="text" name="" id="valeur" class="form-control" formControlName="valeur" data-length="10">
+          </div>
+          <div class="radio" >
+            <div class="container" *ngFor="let m of muscles">
+              <input type="radio" id="muscle_{{m.muscleId}}"  value="{{m.nom}}" formControlName="muscle">
+              <label for="muscle_{{m.muscleId}}">{{m.nom}}</label>
+            </div>
+          </div>
+          <div class="input-field col s16">
+            <label for="content">muscleId</label>
+            <input type="text" name="" id="muscleId"  class="form-control" formControlName="muscleId" data-length="10000">
+          </div>
+
+          </div>
+          <button class="btn btn-success" type="submit">Soumettre</button>
+    </form>
+    <br>
+</div>
+{{form.value | json}} -->
+<br>
+<br>
+<H2 class="text-center">Modifier une mensuration</H2>
+<div class="container">
+    <form  [formGroup]="form" (ngSubmit)="create()">
+      <div class="container radioMuscle">
+        <div class="form-group">
+          <div class="form-check form-check-inline radioMuscle" *ngFor="let m of muscles">
+            <input class="form-check-input" type="radio" id="muscle_{{m.muscleId}}" value="{{m.muscleId}}" formControlName="muscleId">
+            <label class="form-check-label" for="muscle_{{m.muscleId}}">{{m.nom}}</label>
+          </div>
+      </div>
+          <div class="input-field col s16">
+           <label for="idUser">Date</label>
+            <input type="text" name="" id="champs" class="form-control" formControlName="date" data-length="10">
+          </div>
+          <div class="input-field col s16">
+            <label for="idUser">Valeur</label>
+            <input type="text" name="" id="champs" class="form-control" formControlName="valeur" data-length="10">
+          </div>
+        </div>
+        <br>
+        <div class="container buttonSubmit">
+          <button class="btn btn-success" type="submit">Soumettre</button>
+        </div>
+    </form>
+    <br>
+</div>
+{{form.value | json}}

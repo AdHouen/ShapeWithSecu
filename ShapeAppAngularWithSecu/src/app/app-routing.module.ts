@@ -13,6 +13,8 @@ import { ExerciceComponent } from './components/user/exercice/exercice.component
 import { GraphiqueComponent } from './components/user/graphique/graphique.component';
 import { CalculBmiComponent } from './components/user/calcul-bmi/calcul-bmi.component';
 import { NgModule } from '@angular/core';
+import { AuthenticationGuard } from './guard/authentification.guard';
+
 
 
 const routes: Routes = [
@@ -21,18 +23,18 @@ const routes: Routes = [
   {path: '',component:AccueilComponent},// Accueil
   {path: 'login',component:LoginComponent},// Login
   {path: 'register',component:RegisterComponent},// Register
-  {path: 'contact',component:ContactComponent},// Cobntact
-  {path: 'bmi',component:CalculBmiComponent, },// IMC
-  {path: 'graphique',component:GraphiqueComponent},// Graphique
-  {path: 'exercice',component:ExerciceComponent},// Exercice
-  {path: 'entrainement' ,component:ListEntrainementComponent },// Entrainement
-  {path: 'entrainements/:id' ,component:ListEntrainementComponent },
-  {path: 'addEntrainement' ,component:AddEntrainementComponent },// Ajouter un entrainement
-  {path: 'editEntrainement/:id' ,component:EditEntrainementComponent },// Edit un entrainement
-  {path: 'galerie' ,component:UploadFileComponent },// Galerie
-  {path: 'data' ,component: ListDataComponent },// Mensuration
-  {path: 'data/:id' ,component: ListDataComponent },
-  {path: 'addData' ,component: AddDataComponent},
+  {path: 'contact',component:ContactComponent},// Contact
+  {path: 'bmi',component:CalculBmiComponent, canActivate:[AuthenticationGuard] },// IMC
+  {path: 'graphique',component:GraphiqueComponent,canActivate:[AuthenticationGuard]},// Graphique
+  {path: 'exercice',component:ExerciceComponent,canActivate:[AuthenticationGuard]},// Exercice
+  {path: 'entrainement' ,component:ListEntrainementComponent,canActivate:[AuthenticationGuard]},// Entrainement
+  {path: 'entrainements/:id' ,component:ListEntrainementComponent,canActivate:[AuthenticationGuard]},
+  {path: 'addEntrainement' ,component:AddEntrainementComponent,canActivate:[AuthenticationGuard] },// Ajouter un entrainement
+  {path: 'editEntrainement/:id' ,component:EditEntrainementComponent,canActivate:[AuthenticationGuard] },// Edit un entrainement
+  {path: 'galerie' ,component:UploadFileComponent,canActivate:[AuthenticationGuard]},// Galerie
+  {path: 'data' ,component: ListDataComponent,canActivate:[AuthenticationGuard] },// Mensuration
+  {path: 'data/:id' ,component: ListDataComponent,canActivate:[AuthenticationGuard]},
+  {path: 'addData' ,component: AddDataComponent,canActivate:[AuthenticationGuard]},
 
 
 

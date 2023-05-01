@@ -1,0 +1,53 @@
+
+
+/* Titre de la section */
+h2 {
+  color: white;
+
+}
+
+/* CSS Inputs Autres champs */
+.input-field{
+  margin: auto;
+	color: #00c6f8bd;
+  font-size: 1rem;
+  width: 12rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+#champs{
+  background: #222429;
+	color: #00c6f8bd;
+}
+
+/* Button submit */
+.container .buttonSubmit{
+  display: flex;
+  justify-content: center;
+}
+
+/* CSS Muscle */
+.container .radioMuscle{
+  color: #fff;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+.radioMuscle input:checked + label{
+	background-image: linear-gradient(180deg, #08dee6, #012d0d);
+  padding: 0.5rem 5rem;
+  border-radius: 10px;
+  box-shadow: 6px 6px 5px #058c9131;
+  cursor: pointer;
+
+}
+/* CSS Radio */
+.form-group input{
+  display: none;
+
+}
