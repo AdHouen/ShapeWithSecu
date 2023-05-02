@@ -8,6 +8,10 @@ i{
   border-color: #03e9f4;
   background-color: #03e9f4;
 }
+.btn-secondary{
+  border-color: #f4030f;
+  background-color: #f40307;
+}
 
 img{
 width: 150px;
@@ -15,5 +19,11 @@ width: 150px;
 
 .text-primary{
   color: #03e9f4;
+}
+.buttonCo{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
 }
 

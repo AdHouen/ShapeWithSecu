@@ -1,8 +1,14 @@
 .tab-content  {
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: justify;
+
+
+
 
 }
+
+
 
 h1,
 td,
@@ -13,4 +19,40 @@ tr {
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
   color: #fff;
   background-color: #03e9f4;
+}
+h5
+{
+  color: #03e9f4;
+}
+img{
+  width: 150px;
+}
+
+@media (max-width: 500px) {
+  .tab-content{
+    font-size: 5px;
+    margin: auto;
+
+
+
+  }
+  img{
+    width:25px;
+  }
+
+
+}
+
+@media (max-width: 800px) {
+  .tab-content{
+    font-size: small;
+    margin: auto;
+
+
+
+  }
+  img{
+    width: 100px;
+  }
+
 }

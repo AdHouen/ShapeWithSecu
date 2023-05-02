@@ -10,7 +10,7 @@
                                   <h3 class="h4 text-theme text-center">Login</h3>
                               </div>
 
-                              <h6 class="h5 mb-0">Heureux de vous revoir!</h6>
+                              <h6 class="h5 mb-0">Heureux de vous revoir !</h6>
                               <p class="text-muted mt-2 mb-5">Entrez votre identifiant et mot de passe pour accéder à l'interface administrateur.</p>
 
 
@@ -48,8 +48,8 @@
                                 <div class="form-group">
                                   <label for="confirmPassword">Confirm password</label>
                                   <input type="password" name="confirmPassword" required ngModel #confirmPasswordInput= "ngModel" class="form-control">
-                                  <span class="help-block" style="color:red;" *ngIf="confirmPasswordInput.value !== passwordInput.value">le mot de passe ne corespond pas</span>
-                                  <span class="help-block" style="color:green;" *ngIf="confirmPasswordInput.value == passwordInput.value">le mot de passe coresspond</span>
+                                  <span class="help-block" style="color:red;" *ngIf="confirmPasswordInput.value !== passwordInput.value">Le mot de passe ne corespond pas</span>
+                                  <span class="help-block" style="color:green;" *ngIf="confirmPasswordInput.value == passwordInput.value">Le mot de passe coresspond</span>
                                 </div>
 
                                 <button type="submit" class="btn btn-theme" [disabled]="registerForm.invalid || showLoading">

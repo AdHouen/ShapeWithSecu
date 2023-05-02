@@ -1,7 +1,7 @@
 <!-- Class Timetable Start -->
 <div class="container-fluid p-5">
     <div class="mb-5 text-center">
-      <h5 class="text-primary text-uppercase">Liste des exercices</h5>
+      <h5 class="text-uppercase">Liste des exercices</h5>
       <h1 class="display-3 text-uppercase mb-0">Choisis ton muscle</h1>
     </div>
     <div class="tab-class text-center">
@@ -15,7 +15,7 @@
   <!-- Class Timetable Start -->
     <div class="tab-content " *ngFor="let item of muscles">
 
-        <div id="tab-{{item.muscleId}}" class="tab-pane fade p-0 ">
+        <div id="tab-1" class="tab-pane fade p-0 ">
             <table id="table_id" class="table align-middle  table-striped" >
                 <thead>
                     <tr>
@@ -25,6 +25,7 @@
                         <th scope="col">Description</th>
                     </tr>
                 </thead>
+
                 <tbody>
                     <tr *ngFor="let item of exercices">
                         <td *ngIf="item.muscleId==1">{{item.nom}}</td>
@@ -32,7 +33,7 @@
                             <div class="responsive ">
                                 <div class="gallery  ">
                                     <div class="image">
-                                        <img class=img-responsive   src="../../../../../assets/img/photo_exo/epaules/exo/{{item.photo}}" style="height: 150px;" >
+                                        <img class=img-responsive   src="../../../../../assets/img/photo_exo/epaules/exo/{{item.photo}}" >
                                     </div>
                                 </div>
                             </div>
@@ -41,7 +42,7 @@
                             <div class="responsive ">
                                 <div class="gallery  ">
                                     <div class="image">
-                                        <img class=img-responsive   src="../../../../../assets/img/photo_exo/epaules/positionnement/{{item.position}}" style="height: 150px;" >
+                                        <img class=img-responsive   src="../../../../../assets/img/photo_exo/epaules/positionnement/{{item.position}}">
                                     </div>
                                 </div>
                             </div>
@@ -49,9 +50,9 @@
                         <td *ngIf="item.muscleId==1">{{item.description}}</td>
                     </tr>
                 </tbody>
+
             </table>
         </div>
-
 
         <div id="tab-2" class="tab-pane fade p-0">
             <table id="table_id" class="table align-middle" >
@@ -70,7 +71,7 @@
                     <div class="responsive ">
                         <div class="gallery  ">
                         <div class="image">
-                            <img class=img-responsive   src="../../../../../assets/img/photo_exo/biceps/exo/{{item.photo}}" style="height: 150px;" >
+                            <img class=img-responsive   src="../../../../../assets/img/photo_exo/biceps/exo/{{item.photo}}">
                         </div>
                         </div>
                     </div>
@@ -79,7 +80,7 @@
                     <div class="responsive ">
                         <div class="gallery  ">
                         <div class="image">
-                            <img class=img-responsive   src="../../../../../assets/img/photo_exo/biceps/positionnement/{{item.position}}" style="height: 150px;" >
+                            <img class=img-responsive   src="../../../../../assets/img/photo_exo/biceps/positionnement/{{item.position}}">
                         </div>
                         </div>
                     </div>
@@ -91,310 +92,319 @@
             </tbody>
             </table>
         </div>
+
         <div id="tab-3" class="tab-pane fade p-0">
-            <table id="table_id" class="table align-middle" >
-                <thead>
-                    <tr>
-                        <th scope="col">Nom</th>
-                        <th scope="col">Photo</th>
-                        <th scope="col">Positionnement</th>
-                        <th scope="col">Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <tr *ngFor="let item of exercices">
-                    <td *ngIf="item.muscle_id==89">{{item.exercice_nom}}</td>
-                    <td *ngIf="item.muscle_id==89" >
-                    <div class="responsive ">
-                        <div class="gallery  ">
-                        <div class="image">
-                            <img class=img-responsive   src="../../../../../assets/img/photo_exo/biceps/exo/{{item.exercice_photo}}" style="height: 150px;" >
-                        </div>
-                        </div>
-                    </div>
-                    </td>
-                    <td *ngIf="item.muscle_id==89" >
-                    <div class="responsive ">
-                        <div class="gallery  ">
-                        <div class="image">
-                            <img class=img-responsive   src="../../../../../assets/img/photo_exo/biceps/positionnement/{{item.exercice_position}}" style="height: 150px;" >
-                        </div>
-                        </div>
-                    </div>
-                    </td>
+          <table id="table_id" class="table align-middle" >
+              <thead>
+                  <tr>
+                      <th scope="col">Nom</th>
+                      <th scope="col">Photo</th>
+                      <th scope="col">Positionnement</th>
+                      <th scope="col">Description</th>
+                  </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let item of exercices">
+                  <td *ngIf="item.muscleId==3">{{item.nom}}</td>
+                  <td *ngIf="item.muscleId==3" >
+                  <div class="responsive ">
+                      <div class="gallery  ">
+                      <div class="image">
+                          <img class=img-responsive   src="../../../../../assets/img/photo_exo/triceps/exo/{{item.photo}}">
+                      </div>
+                      </div>
+                  </div>
+                  </td>
+                  <td *ngIf="item.muscleId==3" >
+                  <div class="responsive ">
+                      <div class="gallery  ">
+                      <div class="image">
+                          <img class=img-responsive   src="../../../../../assets/img/photo_exo/triceps/positionnement/{{item.position}}">
+                      </div>
+                      </div>
+                  </div>
+                  </td>
 
-                    <td *ngIf="item.muscle_id==89">{{item.exercice_description}}</td>
+                  <td *ngIf="item.muscleId==3">{{item.description}}</td>
 
-                </tr>
-            </tbody>
-            </table>
+              </tr>
+          </tbody>
+          </table>
         </div>
+
         <div id="tab-4" class="tab-pane fade p-0">
-            <table id="table_id" class="table align-middle" >
-                <thead>
-                    <tr>
-                        <th scope="col">Nom</th>
-                        <th scope="col">Photo</th>
-                        <th scope="col">Positionnement</th>
-                        <th scope="col">Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <tr *ngFor="let item of exercices">
-                    <td *ngIf="item.muscle_id==86">{{item.exercice_nom}}</td>
-                    <td *ngIf="item.muscle_id==86" >
-                    <div class="responsive ">
-                        <div class="gallery  ">
-                        <div class="image">
-                            <img class=img-responsive   src="../../../../../assets/img/photo_exo/biceps/exo/{{item.exercice_photo}}" style="height: 150px;" >
-                        </div>
-                        </div>
-                    </div>
-                    </td>
-                    <td *ngIf="item.muscle_id==86" >
-                    <div class="responsive ">
-                        <div class="gallery  ">
-                        <div class="image">
-                            <img class=img-responsive   src="../../../../../assets/img/photo_exo/biceps/positionnement/{{item.exercice_position}}" style="height: 150px;" >
-                        </div>
-                        </div>
-                    </div>
-                    </td>
+          <table id="table_id" class="table align-middle" >
+              <thead>
+                  <tr>
+                      <th scope="col">Nom</th>
+                      <th scope="col">Photo</th>
+                      <th scope="col">Positionnement</th>
+                      <th scope="col">Description</th>
+                  </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let item of exercices">
+                  <td *ngIf="item.muscleId==4">{{item.nom}}</td>
+                  <td *ngIf="item.muscleId==4" >
+                  <div class="responsive ">
+                      <div class="gallery  ">
+                      <div class="image">
+                          <img class=img-responsive   src="../../../../../assets/img/photo_exo/pectoraux/exo/{{item.photo}}">
+                      </div>
+                      </div>
+                  </div>
+                  </td>
+                  <td *ngIf="item.muscleId==4" >
+                  <div class="responsive ">
+                      <div class="gallery  ">
+                      <div class="image">
+                          <img class=img-responsive   src="../../../../../assets/img/photo_exo/pectoraux/positionnement/{{item.position}}">
+                      </div>
+                      </div>
+                  </div>
+                  </td>
 
-                    <td *ngIf="item.muscle_id==86">{{item.exercice_description}}</td>
+                  <td *ngIf="item.muscleId==4">{{item.description}}</td>
 
-                </tr>
-            </tbody>
-            </table>
+              </tr>
+          </tbody>
+          </table>
         </div>
+
         <div id="tab-5" class="tab-pane fade p-0">
-            <table id="table_id" class="table align-middle" >
-                <thead>
-                    <tr>
-                        <th scope="col">Nom</th>
-                        <th scope="col">Photo</th>
-                        <th scope="col">Positionnement</th>
-                        <th scope="col">Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <tr *ngFor="let item of exercices">
-                    <td *ngIf="item.muscle_id==96">{{item.exercice_nom}}</td>
-                    <td *ngIf="item.muscle_id==96" >
-                    <div class="responsive ">
-                        <div class="gallery  ">
-                        <div class="image">
-                            <img class=img-responsive   src="../../../../../assets/img/photo_exo/biceps/exo/{{item.exercice_photo}}" style="height: 150px;" >
-                        </div>
-                        </div>
-                    </div>
-                    </td>
-                    <td *ngIf="item.muscle_id==96" >
-                    <div class="responsive ">
-                        <div class="gallery  ">
-                        <div class="image">
-                            <img class=img-responsive   src="../../../../../assets/img/photo_exo/biceps/positionnement/{{item.exercice_position}}" style="height: 150px;" >
-                        </div>
-                        </div>
-                    </div>
-                    </td>
+          <table id="table_id" class="table align-middle" >
+              <thead>
+                  <tr>
+                      <th scope="col">Nom</th>
+                      <th scope="col">Photo</th>
+                      <th scope="col">Positionnement</th>
+                      <th scope="col">Description</th>
+                  </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let item of exercices">
+                  <td *ngIf="item.muscleId==5">{{item.nom}}</td>
+                  <td *ngIf="item.muscleId==5" >
+                  <div class="responsive ">
+                      <div class="gallery  ">
+                      <div class="image">
+                          <img class=img-responsive   src="../../../../../assets/img/photo_exo/dos/exo/{{item.photo}}">
+                      </div>
+                      </div>
+                  </div>
+                  </td>
+                  <td *ngIf="item.muscleId==5" >
+                  <div class="responsive ">
+                      <div class="gallery  ">
+                      <div class="image">
+                          <img class=img-responsive   src="../../../../../assets/img/photo_exo/dos/positionnement/{{item.position}}">
+                      </div>
+                      </div>
+                  </div>
+                  </td>
 
-                    <td *ngIf="item.muscle_id==96">{{item.exercice_description}}</td>
+                  <td *ngIf="item.muscleId==5">{{item.description}}</td>
 
-                </tr>
-            </tbody>
-            </table>
+              </tr>
+          </tbody>
+          </table>
         </div>
+
         <div id="tab-6" class="tab-pane fade p-0">
-            <table id="table_id" class="table align-middle" >
-                <thead>
-                    <tr>
-                        <th scope="col">Nom</th>
-                        <th scope="col">Photo</th>
-                        <th scope="col">Positionnement</th>
-                        <th scope="col">Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <tr *ngFor="let item of exercices">
-                    <td *ngIf="item.muscle_id==92">{{item.exercice_nom}}</td>
-                    <td *ngIf="item.muscle_id==92" >
-                    <div class="responsive ">
-                        <div class="gallery  ">
-                        <div class="image">
-                            <img class=img-responsive   src="../../../../../assets/img/photo_exo/biceps/exo/{{item.exercice_photo}}" style="height: 150px;" >
-                        </div>
-                        </div>
-                    </div>
-                    </td>
-                    <td *ngIf="item.muscle_id==92" >
-                    <div class="responsive ">
-                        <div class="gallery  ">
-                        <div class="image">
-                            <img class=img-responsive   src="../../../../../assets/img/photo_exo/biceps/positionnement/{{item.exercice_position}}" style="height: 150px;" >
-                        </div>
-                        </div>
-                    </div>
-                    </td>
+          <table id="table_id" class="table align-middle" >
+              <thead>
+                  <tr>
+                      <th scope="col">Nom</th>
+                      <th scope="col">Photo</th>
+                      <th scope="col">Positionnement</th>
+                      <th scope="col">Description</th>
+                  </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let item of exercices">
+                  <td *ngIf="item.muscleId==6">{{item.nom}}</td>
+                  <td *ngIf="item.muscleId==6" >
+                  <div class="responsive ">
+                      <div class="gallery  ">
+                      <div class="image">
+                          <img class=img-responsive   src="../../../../../assets/img/photo_exo/abdos/exo/{{item.photo}}">
+                      </div>
+                      </div>
+                  </div>
+                  </td>
+                  <td *ngIf="item.muscleId==6" >
+                  <div class="responsive ">
+                      <div class="gallery  ">
+                      <div class="image">
+                          <img class=img-responsive   src="../../../../../assets/img/photo_exo/abdos/positionnement/{{item.position}}">
+                      </div>
+                      </div>
+                  </div>
+                  </td>
 
-                    <td *ngIf="item.muscle_id==92">{{item.exercice_description}}</td>
+                  <td *ngIf="item.muscleId==6">{{item.description}}</td>
 
-                </tr>
-            </tbody>
-            </table>
+              </tr>
+          </tbody>
+          </table>
         </div>
+
         <div id="tab-7" class="tab-pane fade p-0">
-            <table id="table_id" class="table align-middle" >
-                <thead>
-                    <tr>
-                        <th scope="col">Nom</th>
-                        <th scope="col">Photo</th>
-                        <th scope="col">Positionnement</th>
-                        <th scope="col">Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <tr *ngFor="let item of exercices">
-                    <td *ngIf="item.muscle_id==93">{{item.exercice_nom}}</td>
-                    <td *ngIf="item.muscle_id==93" >
-                    <div class="responsive ">
-                        <div class="gallery  ">
-                        <div class="image">
-                            <img class=img-responsive   src="../../../../../assets/img/photo_exo/biceps/exo/{{item.exercice_photo}}" style="height: 150px;" >
-                        </div>
-                        </div>
-                    </div>
-                    </td>
-                    <td *ngIf="item.muscle_id==93" >
-                    <div class="responsive ">
-                        <div class="gallery  ">
-                        <div class="image">
-                            <img class=img-responsive   src="../../../../../assets/img/photo_exo/biceps/positionnement/{{item.exercice_position}}" style="height: 150px;" >
-                        </div>
-                        </div>
-                    </div>
-                    </td>
+          <table id="table_id" class="table align-middle" >
+              <thead>
+                  <tr>
+                      <th scope="col">Nom</th>
+                      <th scope="col">Photo</th>
+                      <th scope="col">Positionnement</th>
+                      <th scope="col">Description</th>
+                  </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let item of exercices">
+                  <td *ngIf="item.muscleId==7">{{item.nom}}</td>
+                  <td *ngIf="item.muscleId==7" >
+                  <div class="responsive ">
+                      <div class="gallery  ">
+                      <div class="image">
+                          <img class=img-responsive   src="../../../../../assets/img/photo_exo/fessiers/exo/{{item.photo}}">
+                      </div>
+                      </div>
+                  </div>
+                  </td>
+                  <td *ngIf="item.muscleId==7" >
+                  <div class="responsive ">
+                      <div class="gallery  ">
+                      <div class="image">
+                          <img class=img-responsive   src="../../../../../assets/img/photo_exo/fessiers/positionnement/{{item.position}}">
+                      </div>
+                      </div>
+                  </div>
+                  </td>
 
-                    <td *ngIf="item.muscle_id==93">{{item.exercice_description}}</td>
+                  <td *ngIf="item.muscleId==7">{{item.description}}</td>
 
-                </tr>
-            </tbody>
-            </table>
+              </tr>
+          </tbody>
+          </table>
         </div>
+
         <div id="tab-8" class="tab-pane fade p-0">
-            <table id="table_id" class="table align-middle" >
-                <thead>
-                    <tr>
-                        <th scope="col">Nom</th>
-                        <th scope="col">Photo</th>
-                        <th scope="col">Positionnement</th>
-                        <th scope="col">Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <tr *ngFor="let item of exercices">
-                    <td *ngIf="item.muscle_id==94">{{item.exercice_nom}}</td>
-                    <td *ngIf="item.muscle_id==94" >
-                    <div class="responsive ">
-                        <div class="gallery  ">
-                        <div class="image">
-                            <img class=img-responsive   src="../../../../../assets/img/photo_exo/biceps/exo/{{item.exercice_photo}}" style="height: 150px;" >
-                        </div>
-                        </div>
-                    </div>
-                    </td>
-                    <td *ngIf="item.muscle_id==94" >
-                    <div class="responsive ">
-                        <div class="gallery  ">
-                        <div class="image">
-                            <img class=img-responsive   src="../../../../../assets/img/photo_exo/biceps/positionnement/{{item.exercice_position}}" style="height: 150px;" >
-                        </div>
-                        </div>
-                    </div>
-                    </td>
+          <table id="table_id" class="table align-middle" >
+              <thead>
+                  <tr>
+                      <th scope="col">Nom</th>
+                      <th scope="col">Photo</th>
+                      <th scope="col">Positionnement</th>
+                      <th scope="col">Description</th>
+                  </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let item of exercices">
+                  <td *ngIf="item.muscleId==8">{{item.nom}}</td>
+                  <td *ngIf="item.muscleId==8" >
+                  <div class="responsive ">
+                      <div class="gallery  ">
+                      <div class="image">
+                          <img class=img-responsive   src="../../../../../assets/img/photo_exo/quadriceps/exo/{{item.photo}}">
+                      </div>
+                      </div>
+                  </div>
+                  </td>
+                  <td *ngIf="item.muscleId==8" >
+                  <div class="responsive ">
+                      <div class="gallery  ">
+                      <div class="image">
+                          <img class=img-responsive   src="../../../../../assets/img/photo_exo/quadriceps/positionnement/{{item.position}}">
+                      </div>
+                      </div>
+                  </div>
+                  </td>
 
-                    <td *ngIf="item.muscle_id==94">{{item.exercice_description}}</td>
+                  <td *ngIf="item.muscleId==8">{{item.description}}</td>
 
-                </tr>
-            </tbody>
-            </table>
+              </tr>
+          </tbody>
+          </table>
         </div>
+
         <div id="tab-9" class="tab-pane fade p-0">
-            <table id="table_id" class="table align-middle" >
-                <thead>
-                    <tr>
-                        <th scope="col">Nom</th>
-                        <th scope="col">Photo</th>
-                        <th scope="col">Positionnement</th>
-                        <th scope="col">Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <tr *ngFor="let item of exercices">
-                    <td *ngIf="item.muscle_id==95">{{item.exercice_nom}}</td>
-                    <td *ngIf="item.muscle_id==95" >
-                    <div class="responsive ">
-                        <div class="gallery  ">
-                        <div class="image">
-                            <img class=img-responsive   src="../../../../../assets/img/photo_exo/biceps/exo/{{item.exercice_photo}}" style="height: 150px;" >
-                        </div>
-                        </div>
-                    </div>
-                    </td>
-                    <td *ngIf="item.muscle_id==95" >
-                    <div class="responsive ">
-                        <div class="gallery  ">
-                        <div class="image">
-                            <img class=img-responsive   src="../../../../../assets/img/photo_exo/biceps/positionnement/{{item.exercice_position}}" style="height: 150px;" >
-                        </div>
-                        </div>
-                    </div>
-                    </td>
+          <table id="table_id" class="table align-middle" >
+              <thead>
+                  <tr>
+                      <th scope="col">Nom</th>
+                      <th scope="col">Photo</th>
+                      <th scope="col">Positionnement</th>
+                      <th scope="col">Description</th>
+                  </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let item of exercices">
+                  <td *ngIf="item.muscleId==9">{{item.nom}}</td>
+                  <td *ngIf="item.muscleId==9" >
+                  <div class="responsive ">
+                      <div class="gallery  ">
+                      <div class="image">
+                          <img class=img-responsive   src="../../../../../assets/img/photo_exo/ischios/exo/{{item.photo}}">
+                      </div>
+                      </div>
+                  </div>
+                  </td>
+                  <td *ngIf="item.muscleId==9" >
+                  <div class="responsive ">
+                      <div class="gallery  ">
+                      <div class="image">
+                          <img class=img-responsive   src="../../../../../assets/img/photo_exo/ischios/positionnement/{{item.position}}">
+                      </div>
+                      </div>
+                  </div>
+                  </td>
 
-                    <td *ngIf="item.muscle_id==95">{{item.exercice_description}}</td>
+                  <td *ngIf="item.muscleId==9">{{item.description}}</td>
 
-                </tr>
-            </tbody>
-            </table>
+              </tr>
+          </tbody>
+          </table>
         </div>
+
         <div id="tab-10" class="tab-pane fade p-0">
-            <table id="table_id" class="table align-middle" >
-                <thead>
-                    <tr>
-                        <th scope="col">Nom</th>
-                        <th scope="col">Photo</th>
-                        <th scope="col">Positionnement</th>
-                        <th scope="col">Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <tr *ngFor="let item of exercices">
-                    <td *ngIf="item.muscle_id==99">{{item.exercice_nom}}</td>
-                    <td *ngIf="item.muscle_id==99" >
-                    <div class="responsive ">
-                        <div class="gallery  ">
-                        <div class="image">
-                            <img class=img-responsive   src="../../../../../assets/img/photo_exo/pectoraux/exo/{{item.exercice_photo}}" style="height: 150px;" >
-                        </div>
-                        </div>
-                    </div>
-                    </td>
-                    <td *ngIf="item.muscle_id==99" >
-                    <div class="responsive ">
-                        <div class="gallery  ">
-                        <div class="image">
-                            <img class=img-responsive   src="../../../../../assets/img/photo_exo/pectoraux/positionnement/{{item.exercice_position}}" style="height: 150px;" >
-                        </div>
-                        </div>
-                    </div>
-                    </td>
+          <table id="table_id" class="table align-middle" >
+              <thead>
+                  <tr>
+                      <th scope="col">Nom</th>
+                      <th scope="col">Photo</th>
+                      <th scope="col">Positionnement</th>
+                      <th scope="col">Description</th>
+                  </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let item of exercices">
+                  <td *ngIf="item.muscleId==10">{{item.nom}}</td>
+                  <td *ngIf="item.muscleId==10" >
+                  <div class="responsive ">
+                      <div class="gallery  ">
+                      <div class="image">
+                          <img class=img-responsive   src="../../../../../assets/img/photo_exo/mollet/exo/{{item.photo}}">
+                      </div>
+                      </div>
+                  </div>
+                  </td>
+                  <td *ngIf="item.muscleId==10" >
+                  <div class="responsive ">
+                      <div class="gallery  ">
+                      <div class="image">
+                          <img class=img-responsive   src="../../../../../assets/img/photo_exo/mollet/positionnement/{{item.position}}">
+                      </div>
+                      </div>
+                  </div>
+                  </td>
 
-                    <td *ngIf="item.muscle_id==99">{{item.exercice_description}}</td>
+                  <td *ngIf="item.muscleId==10">{{item.description}}</td>
 
-                </tr>
-            </tbody>
-            </table>
+              </tr>
+          </tbody>
+          </table>
         </div>
+
 
     </div>
 

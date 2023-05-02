@@ -43,6 +43,22 @@ export class LoginComponent implements OnInit,OnDestroy {
        const token = response.headers.get(HeaderType.JWT_TOKEN);
        this.AuthenticationService.saveToken(token!);
        this.AuthenticationService.addUserToLocalCache(response.body!);
+       let loggedUser: User | null = new User();
+          loggedUser = response.body;
+
+          // enregistrer pour avoir accès?
+          if (loggedUser?.role == 'ROLE_ADMIN') {
+
+            localStorage.setItem(
+              'secretAuth',
+              'shape@a@&3ea^$aid%53(^pp_l-98(-!&!smg#b+ha644bnsb_w7o*rshape'
+                         );
+
+            this.notifier.notify(
+              'success',
+              'Bienvenue sur Shape en tant que Admin'
+            );
+          }
        this.router.navigateByUrl('/accueil');
        this.notifier.notify('success', 'Vous êtes connecté');
        this.showLoading = false;

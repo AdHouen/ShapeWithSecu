@@ -32,6 +32,7 @@ import { ContactComponent } from './components/annexe/contact/contact.component'
 import { CounterComponent } from './components/annexe/counter/counter.component';
 import { TeamComponent } from './components/annexe/team/team.component';
 import { RegisterComponent } from './components/login-register/register/register.component';
+import { UserComponent } from './components/user/user/user/user.component';
 
 
 
@@ -45,10 +46,10 @@ const customNotifierOptions: NotifierOptions = {
   position: {
 		horizontal: {
 			position: 'left',
-			distance: 250
+			distance: 100
 		},
 		vertical: {
-			position: 'top',
+			position: 'bottom',
 			distance: 12,
 			gap: 10
 		}
@@ -111,6 +112,7 @@ const customNotifierOptions: NotifierOptions = {
     CounterComponent,
     TeamComponent,
     RegisterComponent,
+    UserComponent,
 
   ],
   imports: [

@@ -14,6 +14,8 @@ import { GraphiqueComponent } from './components/user/graphique/graphique.compon
 import { CalculBmiComponent } from './components/user/calcul-bmi/calcul-bmi.component';
 import { NgModule } from '@angular/core';
 import { AuthenticationGuard } from './guard/authentification.guard';
+import { AdminGuard } from './guard/guard/admin.guard';
+import { UserComponent } from './components/user/user/user/user.component';
 
 
 
@@ -26,7 +28,7 @@ const routes: Routes = [
   {path: 'contact',component:ContactComponent},// Contact
   {path: 'bmi',component:CalculBmiComponent, canActivate:[AuthenticationGuard] },// IMC
   {path: 'graphique',component:GraphiqueComponent,canActivate:[AuthenticationGuard]},// Graphique
-  {path: 'exercice',component:ExerciceComponent,canActivate:[AuthenticationGuard]},// Exercice
+  {path: 'exercice',component:ExerciceComponent,},// Exercice
   {path: 'entrainement' ,component:ListEntrainementComponent,canActivate:[AuthenticationGuard]},// Entrainement
   {path: 'entrainements/:id' ,component:ListEntrainementComponent,canActivate:[AuthenticationGuard]},
   {path: 'addEntrainement' ,component:AddEntrainementComponent,canActivate:[AuthenticationGuard] },// Ajouter un entrainement
@@ -35,6 +37,7 @@ const routes: Routes = [
   {path: 'data' ,component: ListDataComponent,canActivate:[AuthenticationGuard] },// Mensuration
   {path: 'data/:id' ,component: ListDataComponent,canActivate:[AuthenticationGuard]},
   {path: 'addData' ,component: AddDataComponent,canActivate:[AuthenticationGuard]},
+  {path: 'profil' ,component: UserComponent,canActivate:[AdminGuard]},
 
 
 
